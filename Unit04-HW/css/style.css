@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#menu{
+    width: 100%;
+    height: 30px;
+    background: green;
+}
+#menu>ul>li{
+    float: left;
+    list-style: none;
+    border-left: 1px solid green;
+    border-right: 1px solid green;
+    padding-left: 10px;
+    padding-right: 20px;
+    line-height: 30px;
+    position: relative;
+ 
+}
+#menu>ul>li a{
+    text-decoration: none;
+    color: white;
+}
+#menu>ul>li:hover{
+    background: green;
+    cursor: pointer;
+}
+#menu>ul>li:hover  a{
+    color: white;
+}
+#menu>ul>li:hover #submenu{
+    display: block;
+}
+#menu>ul>li:hover #submenu li a{
+    color: white;
+}
+#submenu{
+    position: absolute;
+    top:30px;
+    left: 0;
+    display: none;
+    width: 180px;
+    float: left;
+}
+#submenu li{
+    clear: left;
+    width: 180px;
+}
+#submenu li{
+    background: green;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid limegreen;
+}
+#submenu li:hover{
+    background: limegreen !important;
+}
+#submenu li:hover  a{
+    color:white !important;
+}
+#submenu1{
+    top:30px;
+    display: none;
+    width: 180px;
+    position: absolute;
+    padding-left: 180px;
+    color: black;
+}
+#menu>ul>li>#submenu>li:hover #submenu1{
+    display: block;
+}
+.lui{
+    margin-left: 20px;
+}
+a{
+    margin-left: 10px;
+}
