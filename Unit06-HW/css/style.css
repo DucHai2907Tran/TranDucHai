@@ -1,0 +1,361 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#toanbai{
+	width: 70%;
+	margin: 0 auto;
+}
+
+#Header{
+	width: 100%;
+	height: 100px;
+	line-height: 50px;
+	text-align: center;
+}
+#content{
+	margin-top: 40px;
+	width: 100%;
+	height: 600px;
+	background: #3333;
+}
+#chu{
+	width: 100%;
+	height: 10%;
+	text-align: center;
+}
+#Left{
+	width: 32%;
+	height: 100%;
+	float: left;
+}
+#Left1{
+	width: 32%;
+	height: 100%;
+	float: left;
+}
+#Main{
+	width: 32%;
+	height: 100%;
+	float: left;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+#Right{
+	width: 32%;
+	height: 100%;
+	float: right;
+}
+#Right1{
+	width: 66%;
+	height: 100%;
+	float: left;
+	margin-right: 2%;
+}
+#Footer{
+	width: 100%;
+	height: 450px;
+}
+#Footer2{
+	border-top: 3px dotted white;
+	width: 100%;
+	height: 500px;
+	background: white;
+	color: white;
+}
+.phan100{
+	width: 100%;
+	height: 45%;
+}
+.phan200{
+	width: 100%;
+	height: 45%;
+}
+#anh1{
+	background-image: url(../img/rap1.png);
+	background-size: cover;
+	height: 75%;
+	width: 100%;
+}
+#anh2{
+	height: 25%;
+	width: 100%;	
+}
+#anh3{
+	background-image: url(../img/sellmymobile.com.png);
+	background-size: cover;
+	height: 75%;
+	width: 100%;
+}
+#anh4{
+	background-image: url(../img/rap4.png);
+	background-size: cover;
+	height: 75%;
+	width: 100%;
+}
+#anh5{
+	background-image: url(../img/rap3.png);
+	background-size: cover;
+	height: 75%;
+	width: 100%;
+}
+#anh6{
+	background-image: url(../img/rap2.png);
+	background-size: cover;
+	height: 75%;
+	width: 100%;
+}
+#anh7{
+	background-image: url(../img/rap5.png);
+	background-size: cover;
+	height: 75%;
+	width: 100%;
+}
+@media screen and (max-width: 480px){
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	#toanbai{
+		width: 70%;
+		margin: 0 auto;
+		}
+
+	#Header{
+		width: 100%;
+		height: 200px;
+		line-height: 50px;
+		text-align: center;
+	}
+	#content{
+		margin-top: 40px;
+		width: 100%;
+		height: 1400px;
+		background: #3333;
+	}
+	#chu{
+		width: 100%;
+		height: 10%;
+		text-align: center;
+	}
+	#Left{
+		width: 100%;
+		height: 100%;
+		background: #3333;
+	}
+	#Left1{
+		margin-top: 100px;
+		width: 100%;
+		height: 100%;
+		margin-top: 500px;
+	}
+	#Main{
+		width: 100%;
+		height: 100%;
+		margin-left: 2%;
+		margin-right: 2%;
+		background: #3333;
+	}
+	#Right{
+		width: 100%;
+		height: 100%;
+		background: #3333;
+	}
+	#Right1{
+		width: 100%;
+		height: 100%;
+		margin-right: 2%;
+
+	}
+	#Footer{
+		width: 100%;
+		height: 450px;
+	}
+	#Footer2{
+		margin-top: 1775%;
+		border-top: 3px dotted white;
+		width: 100%;
+		height: 500px;
+		background: #00FFFF;
+		color: white;
+	}
+	.phan100{
+		width: 100%;
+		height: 45%;
+	}
+	.phan200{
+		width: 100%;
+		height: 45%;
+	}
+	#anh1{
+		background-image: url(../img/rap1.png);
+		background-size: 100% 100%;
+		height: 75%;
+		width: 100%;
+	}
+	#anh2{
+		height: 25%;
+		width: 100%;	
+	}
+	#anh3{
+		background-image: url(../img/sellmymobile.com.png);
+		background-size: 100% 100%;
+		height: 75%;
+		width: 100%;
+	}
+	#anh4{
+		background-image: url(../img/rap4.png);
+		background-size: 100% 100%;
+		height: 75%;
+		width: 100%;
+	}
+	#anh5{
+		background-image: url(../img/rap3.png);
+		background-size: 100% 100%;
+		height: 75%;
+		width: 100%;
+	}
+	#anh6{
+		background-image: url(../img/rap2.png);
+		background-size: 100% 100%;
+		height: 75%;
+		width: 100%;
+	}
+	#anh7{
+		background-image: url(../img/rap5.png);
+		background-size: 100% 100%;
+		height: 75%;
+		width: 100%;
+	}
+}
+@media screen and (min-width: 481px) and (max-width: 700px){
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	#toanbai{
+		width: 70%;
+		margin: 0 auto;
+	}
+	#Header{
+		width: 100%;
+		height: 100px;
+		line-height: 50px;
+		text-align: center;
+	}
+	#content{
+		margin-top: 40px;
+		width: 100%;
+		height: 600px;
+		background: #3333;
+	}
+	#chu{
+		width: 100%;
+		height: 10%;
+		text-align: center;
+	}
+	#Left{
+		margin-top: 10%;
+		width: 48%;
+		height: 100%;
+		float: left;
+		background: #3333;
+	}
+	#Left1{
+		width: 32%;
+		height: 100%;
+	}
+	#Main{
+		margin-top: 10%;
+		width: 48%;
+		height: 100%;
+		float: left;
+		margin-left: 2%;
+		background: #3333;
+	}
+	#Right{
+		width: 100%;
+		clear: both;
+		background: #3333;
+	}
+	.phan300{
+		width: 48% !important;
+		float: left !important;
+		height: 100%;
+	}
+	.phan400{
+		width: 48% !important;
+		height: 100%;
+		float: left !important;
+		margin-left: 2%;
+	}
+	#Right1{
+		width: 100%;
+		height: 500px;
+		margin-right: 2%;
+	}
+	#Footer{
+		width: 100%;
+		height: 450px;
+	}
+	#Footer2{
+		margin-top: 200%;
+		margin-left: 0;
+		border-top: 3px dotted white;
+		width: 100%;
+		height: 500px;
+		color: white;
+		background: white;
+	}
+	.phan100{
+		width: 100%;
+		height: 45%;
+	}
+	.phan200{
+		width: 100%;
+		height: 45%;
+	}
+	#anh1{
+		background-image: url(../img/rap1.png);
+		background-size: cover;
+		height: 75%;
+		width: 100%;
+	}
+	#anh2{
+		height: 25%;
+		width: 100%;	
+	}
+	#anh3{
+		background-image: url(../img/sellmymobile.com.png);
+		background-size: cover;
+		height: 75%;
+		width: 100%;
+	}	
+	#anh4{
+		background-image: url(../img/rap4.png);
+		background-size: cover;
+		height: 75%;
+		width: 100%;
+	}
+	#anh5{
+		background-image: url(../img/rap3.png);
+		background-size: cover;
+		height: 75%;
+		width: 100%;
+	}
+	#anh6{
+		background-image: url(../img/rap2.png);
+		background-size: cover;
+		height: 75%;
+		width: 100%;
+	}
+	#anh7{
+		background-image: url(../img/rap5.png);
+		background-size: cover;
+		height: 75%;
+		width: 100%;
+	}
+	.anhbua{
+		width: 100% !important;
+	}
+}
