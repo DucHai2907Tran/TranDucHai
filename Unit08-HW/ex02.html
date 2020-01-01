@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	function tinh_tong(n)
+	{
+	    var tong = 0;
+	    var index = 0;
+	    do
+	    {
+	        if (index % 1 == 0){
+	            tong += index;
+	        }
+	        index++;
+	    }
+	    while (index <= n);
+	    return tong;
+	} 
+	var n = parseInt(prompt("Nhập số n"));
+	document.write("Tổng số chẵn từ 1 tới " + n + " là: " + tinh_tong(n));
+	</script>
+</body>
+</html>
