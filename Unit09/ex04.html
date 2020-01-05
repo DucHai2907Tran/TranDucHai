@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ex05</title>
+</head>
+<body>
+	<button onclick="goToGoogle()">Go to google</button>
+	<button>Go to Zent</button>
+	<script type="text/javascript">
+		function goToGoogle(){
+			window.location = "https://google.com";
+		}
+		function goToZent(){
+			window.location = "https://zent.asia";
+		}
+		var button = document.getElementsByTagName("button")[0];
+		button.addEventListener("click",goToGoogle);
+		var button = document.getElementsByTagName("button")[1];
+		button.addEventListener("click",goToZent);
+	</script>
+</body>
+</html>

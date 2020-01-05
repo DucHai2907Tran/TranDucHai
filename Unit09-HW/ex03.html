@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ex05</title>
+</head>
+<body>
+	<button onclick="default1()">Mặc định</button>
+	<button onclick="bigger()">Lớn hơn</button>
+	<button onclick="smaller()">Nhỏ hơn</button>
+	<div id="target">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, pariatur.</div>
+	<script type="text/javascript">
+		var count = 0;
+		function default1(){
+			var t = document.getElementById("target");
+			t.style.fontSize = "20px";
+		}
+		function bigger(){
+			count++;
+			var t = document.getElementById("target");
+			if (count==1) {
+				t.style.fontSize = "20px";
+			}
+			var s = parseInt(t.style.fontSize.replace("px",""))*1.4;
+			t.style.fontSize = s+"px";
+		}
+		function smaller(){
+			count++;
+			var t = document.getElementById("target");
+			if (count==1) {
+				t.style.fontSize = "20px";
+			}
+			var s = parseInt(t.style.fontSize.replace("px",""));
+			if (s > 3 && s*0.6>3) {
+				s=s*0.6;
+			}
+			t.style.fontSize = s + "px";
+		}
+
+	</script>
+</body>
+</html>

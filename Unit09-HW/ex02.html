@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#mar{
+			margin: 0 auto;
+			width: 80%;
+		}
+		#margin{
+			margin: 0 auto;
+			width: 20%;
+		}
+		.Item2{
+			margin-left: 2px;
+		}
+		.hover:hover{
+			background-color: green;
+		}
+		.css{
+			background: blue;
+		}
+		.check{
+			width: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div id=mar>
+		<table border="1px" bordercolor="#d4d6d8" align="center" cellspacing="0" class="css">
+			<tr class="hover">
+				<td class="ip"><input type="checkbox" class="check"></td>
+			 	<td><h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, animi!</h4></td>
+			</tr>
+			<tr class="hover">
+				<td class="ip"><input type="checkbox" class="check"></td>
+				<td><h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, animi!</h4></td>
+			</tr>
+			<tr class="hover">
+				<td class="ip"><input type="checkbox" class="check"></td>
+				<td><h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, animi!</h4></td>
+			</tr>
+			<tr class="hover">
+				<td class="ip"><input type="checkbox" class="check"></td>
+				<td><h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, animi!</h4></td>
+			</tr>
+		</table>
+		<br>
+		<br>
+		<div id="margin">
+			<button class="Item1" onclick="check()">
+				Check All
+			</button>
+			<button class="Item2" onclick="uncheck()">
+				Uncheck all
+			</button>
+		</div>
+	</div>
+	<script>
+
+		function check(){
+			var check = document.getElementsByClassName("check");
+			for (var i = 0; i< check.length; i++) {
+				check[i].checked = true;
+			}
+		}
+		function uncheck(){
+			var check = document.getElementsByClassName("check");
+			for (var i = 0; i< check.length; i++) {
+				check[i].checked = false;
+			}
+		}
+	</script>
+</body>
+</html>

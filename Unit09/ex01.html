@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		p{
+
+		}
+		#thep{
+
+		}
+		.cls_thep{
+
+		}
+	</style>
+</head>
+<body>
+	<p id="thep1" class="cls_thep">Hello web front end 29</p>
+	<p id="thep2" class="cls_thep">Hello web front end 29</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, ipsa.</p>
+	<script>
+		console.log(document.getElementById("thep1").innerHTML);
+		var thep1 = document.getElementById("thep1");
+		thep1.innerHTML = "Thay đổi text";
+
+		var thep2 = document.getElementsByClassName("cls_thep")[1];
+		thep2.innerHTML = "Thay đổi p 2";
+
+		var thep3 = document.getElementsByTagName("p")[2];
+		thep3.innerHTML = "Thay đổi p 3";
+	</script>
+</body>
+</html>
