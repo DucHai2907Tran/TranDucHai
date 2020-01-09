@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Slide</title>
+	<link rel="stylesheet" href="../Unit04/css/font-awesome.min.css">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: black;
+		}
+		.slide{
+			width: 1000px;
+			margin: 0 auto;
+			overflow: hidden;
+			margin-top: 100px;
+			border-radius: 10px;
+			position: relative;
+		}
+		.slide:hover .dieuhuong{
+			display: block;
+		}
+		.chuyen-slide{
+			width: 9999px;
+			transition: all 0.5s;
+		}
+		.dieuhuong{
+			color: darkred;
+			position: absolute;
+			font-size: 40px;
+			top: 45%;
+			padding-left: 50px;
+			display: none;
+		}
+		.dieuhuong i:last-child{
+			position: relative;
+			left: 820px;
+		}
+		img{
+			width: 1000px;
+			height: 400px;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div class="slide">
+		<div class="dieuhuong">
+			<i class="fa fa-chevron-circle-left" aria-hidden="true" onclick="Back()"></i>
+			<i class="fa fa-chevron-circle-right" aria-hidden="true" onclick="Next()"></i>
+		</div>
+		<div class="chuyen-slide">
+			<img src="img/1.jpg" alt="">
+			<img src="img/2.jpg" alt="">
+			<img src="img/3.jpg" alt="">
+			<img src="img/4.jpg" alt="">
+		</div>
+	</div>
+	<script>
+		var KichThuoc = document.getElementsByClassName("slide")[0].clientWidth;
+		var Chuyen = 0;
+		var ChuyenSlide = document.getElementsByClassName("chuyen-slide")[0];
+		var Img = ChuyenSlide.getElementsByTagName("img");
+		var Max = KichThuoc* Img.length;
+		Max -= KichThuoc;
+		function Next(){
+			if (Chuyen<Max) Chuyen += KichThuoc;
+			else Chuyen = 0;
+			ChuyenSlide.style.marginLeft = '-' + Chuyen + 'px';
+		}
+		function Back(){
+			if(Chuyen == 0) Chuyen = Max;
+			else Chuyen -= KichThuoc;
+			ChuyenSlide.style.marginLeft = '-' + Chuyen + 'px';
+		}
+		setInterval(function(){
+			Next();
+		}, 3000);
+	</script>
+</body>
+</html>
