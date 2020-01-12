@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../JS/jquery-3.4.1.min.js"></script>
+	<style>
+		div{
+			border: 1px solid black;
+		}
+		.active{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, a.
+	</div>
+	<button id="prepend">prepend</button>
+	<button id="before">before</button>
+	<button id="append">append</button>
+	<button id="after">after</button>
+
+	<br>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, fugit.</p>
+
+	<button>AddClass</button>
+	<button>RemoveClass</button>
+	<button>ToggleClass</button>
+	<script>
+		$(document).ready(function(){
+			$('#prepend').on('click',function(){
+				$('div').prepend('<p>WFE</p>');
+			})
+
+			$('#before').on('click',function(){
+				$('div').before("Hello before");
+			})
+
+			$('#append').on('click',function(){
+				$('div').append("Hello append");
+			})
+
+			$('#after').on('click',function(){
+				$('div').after("Hello after");
+			})
+
+			$('button').eq(4).on('click',function(){
+				$('p').addClass('active');
+			})
+
+			$('button').eq(5).on('click',function(){
+				$('p').removeClass('active');
+			})
+
+			$('button').eq(6).on('click',function(){
+				$('p').toggleClass('active');
+			})
+		})
+	</script>
+</body>
+</html>

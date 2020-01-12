@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../JS/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<button id="clickme">
+		Click
+	</button>
+	<script>
+		$(document).ready(function(){
+			$("#clickme").on('click',function(){
+				$(this).after("<button id='test'>sinh ra</button>")
+			})
+			$("body").on('click','#test',function(){
+				alert("click")
+			})
+		})
+	</script>
+</body>
+</html>

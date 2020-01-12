@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../JS/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus explicabo numquam molestiae aut dolorum, itaque inventore, eaque nostrum rerum eos?</p>
+	<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores similique nihil maxime. Harum praesentium facere, dolor officiis eligendi amet mollitia!</div>
+	<input type="text" id="name" value="1234">
+	<script>
+		$(document).ready(function(){
+			$('p').text("<<a href='google.com'>Thẻ a</a>");
+			$('div').html("<a href='google.com'>Thẻ a</a>");
+			$('#name').val("Trần Đức Hải");
+			$('p').css('color','red');
+			$('div').css({
+				'margin-left':'110px',
+				'width':'50px',
+				'height':'100px',
+				'background':'red'
+			});
+			$('p').remove(); //Xóa bỏ hoàn toàn
+			$('p').empty();
+			
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../JS/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, officia!
+	</p>
+	<button>
+		Click
+	</button>
+	<script>
+		$(document).ready(function(){
+			$('button').on('click',function(){
+				$('p').css({'color':'blue'});
+			});
+			$("p").on({
+				mouseenter: function(){
+				$(this).css("background-color","lightgray");
+				},
+				mouseleave: function(){
+				$(this).css("background-color","red");
+				},
+				click: function(){
+				$(this).css("background-color","lightblue");
+				}
+			});
+		})
+	</script>
+</body>
+</html>
