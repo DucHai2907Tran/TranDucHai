@@ -1,0 +1,61 @@
+body{
+	font-size: 20px;
+}
+#banner{
+	width: 80%;
+	margin: 0 auto;
+	height: 70px;
+}
+input{
+	border-radius: 5px;
+	height: 20px;
+	width: 30%;
+}
+#banner{
+	text-align: center;
+}
+.banner_menu{
+	background-color: #3333;
+	border-radius: 8px;
+	width: 20%;
+	height: 50px;
+	line-height: 50px;
+	float: left;
+	margin-right: 6.5%;
+}
+.menu_sp{
+	margin-right: 0% !important;
+}
+
+/**********/
+#container{
+	width: 80%;
+	height: 600px;
+	margin: 0 auto;
+	background-color: #DBDBDB;
+	padding-left: 50px;
+}
+#btn{
+	width: 80%;
+	margin: 0 auto;
+	text-align: right;
+}
+#content_1{
+	padding-left: 2%;
+	padding-top: 20px;
+}
+button{
+	height: 30px;
+	color: white;
+	background-color: #2184BE;
+	margin-right: 0px;
+	border-radius: 10px;
+	width: 100px;
+}
+span{
+	color: red;
+	margin-left: 5%;
+}
+.check{
+	width: 50px;
+}
