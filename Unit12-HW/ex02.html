@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="../JS/jquery-3.4.1.min.js"></script>
+	<title>Document</title>
+	<style>
+		div{
+			border: 1px solid black;
+		}
+		div *{
+			display: block;
+			border: 1px solid black;
+			padding: 5px;
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div>div
+		<p>p</p>
+		<h1>h1</h1>
+		<h1>h1</h1>
+		<h2>h2</h2>
+		<h3>h3</h3>
+		<h4>h4</h4>
+		<ul>
+			<li class="mb">HN</li>
+			<li class="mb">HP</li>
+			<li>HCM</li>
+			<li>VT</li>
+		</ul>
+	</div>
+	<script>
+		$(document).ready(function(){
+			$('h2').nextAll().css({'border-color':'red'});
+			$('h2').prevAll().css({'border-color':'blue'});
+
+			$('h2').siblings().css({'border-color':'white'});
+
+			$('h1').first().css({'border-color':'red'});
+			$('h1').last().css({'border-color':'blue'});
+
+			$('li').filter('.mb').css({'color':'blue'});
+			$('li').not('.mb').css({'color':'red'});
+		})
+	</script>
+</body>
+</html>

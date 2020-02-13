@@ -113,7 +113,6 @@ $(document).ready(function(){
 			}
 			numslide++;
 			content_1.eq(3).css({'display' : 'block'});
-			$('#next').text('Finish');
 		}
 		if ($('.check').is(':checked')) {
 			swal("Good job!", "Thanks You!", "success");

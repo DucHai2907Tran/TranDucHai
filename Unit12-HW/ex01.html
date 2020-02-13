@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="../JS/jquery-3.4.1.min.js"></script>
+	<title>Document</title>
+	<style>
+		div{
+			border: 1px solid black;
+		}
+		div *{
+			display: block;
+			border: 1px solid black;
+			padding: 5px;
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div>div
+		<ul>ul
+			<li>li
+				<p>p</p>
+			</li>
+		</ul>
+	</div>
+	<script>
+		$(document).ready(function(){
+			$('p').parent().css({'border-color':'red'});
+			$('p').parents().css({'border-color':'red'});
+			$('p').parents('ul').css({'border-color':'red'});
+			$('p').parentsUntil('div').css({'border-color':'red'});
+
+			$('div').find('li').css({'border-color':'blue'});
+			$('div').children().css({'border-color':'black'});
+		})
+	</script>
+</body>
+</html>

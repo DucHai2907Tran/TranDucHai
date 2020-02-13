@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="../JS/jquery-3.4.1.min.js"></script>
+	<title>Document</title>
+</head>
+<body>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure fugiat assumenda debitis hic tenetur ab dolore recusandae sint perferendis ullam vero accusantium enim magni, modi dignissimos molestias, eos atque aliquid, repellat saepe aut. Atque ab, vel recusandae ipsa praesentium maxime, facilis officia consequuntur facere, quasi cumque? Magnam numquam commodi, harum!</p>
+	<button>Show</button>
+	<button>Hide</button>
+	<button>Toggle</button>
+	<button>SlideDown</button>
+	<button>SlideUp</button>
+	<button>SlideToggle</button>
+
+	<script>
+		$(document).ready(function(){
+			$('button').eq(0).on('click',function(){
+				$('p').show();
+			})
+			$('button').eq(1).on('click',function(){
+				$('p').hide();
+			})
+			$('button').eq(2).on('click',function(){
+				$('p').toggle();
+			})
+
+			$('button').eq(3).on('click',function(){
+				$('p').slideDown();
+			})
+			$('button').eq(4).on('click',function(){
+				$('p').slideUp();
+			})
+			$('button').eq(5).on('click',function(){
+				$('p').slideToggle();
+			})
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../JS/jquery-3.4.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+	<style>
+		.error{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<form action="" id="frm">
+		Họ: <input type="text" name="name">
+		<br>
+		Email: <input type="text" name="email">
+		<br>
+		Phone: <input type="number" name="phone">
+		<br>
+		<input type="submit" value="Đăng kí">
+	</form>
+	<script>
+		$(document).ready(function(){
+			$("#frm").validate({
+				rules: {
+					name: "required",
+					email: {
+						required: true,
+						email: true
+					},
+					phone: {
+						required: true,
+						number: true,
+						minlength: 10,
+						maxlength: 11
+					},
+				},
+				messages: {
+					name: "Vui lòng nhập tên",
+					email: {
+						required: "vui lòng nhập email",
+						email: "Email chưa đúng định dạng"
+					},
+					phone: {
+						required: "Vui lòng nhập sđt",
+						minlength: "Sđt chưa đủ 10 số",
+						maxlength: "Sđt không hơn 10 số"
+					},
+				}
+				
+			})
+		})
+	</script>
+</body>
+</html>
