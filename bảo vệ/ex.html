@@ -1,0 +1,1659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../JS/jquery-3.4.1.min.js"></script>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="../Unit04/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<style>
+		.work {
+		  padding-bottom: 40px;
+		  margin-top: 60px;
+		}
+		.work * {
+		  box-sizing: border-box;
+		}
+		.work .category-buttons {
+		  text-align: center;
+		  margin: 0 0 60px 0;
+		}
+		@media (max-width: 610px) {
+		  .work .category-buttons {
+		    margin: 0 0 30px 0;
+		  }
+		  .work .category-buttons a {
+		    display: inline-block;
+		    width: 46%;
+		    padding: 12px 10px !important;
+		    margin: 1.5% 1% !important;
+		  }
+		  .work .category-buttons a:nth-child(even) {
+		    margin-right: 0;
+		  }
+		  .work .category-buttons a:nth-child(odd) {
+		    margin-left: 0;
+		  }
+		}
+		@media (min-width: 611px) {
+		  .work .category-buttons a:first-child {
+		    margin-left: 0;
+		  }
+		  .work .category-buttons a:last-child {
+		    margin-right: 0;
+		  }
+		}
+		.work .category-buttons a {
+		  color: #9A9A9A;
+		  text-decoration: none;
+		  padding: 9px 15px;
+		  border: 1px solid #9A9A9A;
+		  margin: 0 10px;
+		  cursor: pointer;
+		}
+		.work .category-buttons a.active {
+		  color: #373B3D;
+		  border: 1px solid #373B3D;
+		}
+		.work .grid {
+		  margin-top: 40px;
+		  width: 100%;
+		  max-width: 960px;
+		  margin: 0 auto;
+		  position: relative;
+		  -webkit-transition: all 750ms cubic-bezier(1, 0, 0, 1);
+		  transition: all 750ms cubic-bezier(1, 0, 0, 1);
+		}
+		@media (max-width: 960px) {
+		  .work .grid {
+		    width: 700px;
+		  }
+		}
+		@media (max-width: 720px) {
+		  .work .grid {
+		    width: 100%;
+		  }
+		}
+		.work .grid .animating {
+		  -webkit-transition: all 750ms cubic-bezier(0.175, 0.885, 0.32, 1.1);
+		  transition: all 750ms cubic-bezier(0.175, 0.885, 0.32, 1.1);
+		}
+		.work .grid .setScale {
+		  -webkit-transform: scale(1);
+		  -ms-transform: scale(1);
+		  transform: scale(1);
+		}
+		.work .grid .show {
+		  -webkit-transform: scale(1);
+		  -ms-transform: scale(1);
+		  transform: scale(1);
+		  opacity: 1;
+		}
+		.work .card {
+		  background: #fff;
+		  display: block;
+		  text-decoration: none;
+		  color: #2b2b2b;
+		  width: 32%;
+		  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px 5px rgba(0, 0, 0, 0.15);
+		  transform-origin: center center;
+		  -webkit-transform: translateZ(0);
+		  -moz-transform: translateZ(0);
+		  -ms-transform: translateZ(0);
+		  -o-transform: translateZ(0);
+		  transform: translateZ(0);
+		  -webkit-transform: scale(0);
+		  -ms-transform: scale(0);
+		  transform: scale(0);
+		  opacity: 0;
+		}
+		@media (max-width: 700px) {
+		  .work .card {
+		    width: 49.25%;
+		  }
+		}
+		@media (max-width: 480px) {
+		  .work .card {
+		    width: 100%;
+		  }
+		}
+		.work .card img {
+		  display: block;
+		  width: 100%;
+		}
+		.work .card .title {
+		  padding: 10px;
+		  color: #2b2b2b;
+		}
+		.work .guide {
+		  width: 32%;
+		  position: absolute;
+		  left: 0;
+		  top: 0;
+		  z-index: -1000;
+		}
+		@media (max-width: 700px) {
+		  .work .guide {
+		    width: 49.25%;
+		  }
+		}
+		@media (max-width: 480px) {
+		  .work .guide {
+		    width: 100%;
+		  }
+		}
+		*{
+			padding-right: 0 !important;
+			padding-left: 0 !important;
+		}
+		.header{
+			background: url(images/homebg.jpg);
+			height: 700px;
+			width: 100%;
+			background-size: 100% 700px;
+		}
+		#mo{
+			width: 100%;
+			height: 700px;
+			background: #00000099;
+		}
+		#mo1{
+			width: 100%;
+			height: 600px;
+			background: #00000099;
+		}
+		#mo2{
+			width: 100%;
+			height: 400px;
+			background: #00000099;
+		}
+		.mar{
+			margin: 0 auto;
+			width: 80%;
+		}
+		.mar1{
+			font-size: 450%;
+		}
+		.menu{
+			padding-top: 2%;
+			color: white !important;
+			font-size: 100%;
+
+		}
+		.text1{
+			padding-top: 50px;
+			margin: 0 auto;
+			width: 70%;
+			text-align: center;
+		}
+		.text12{
+			margin: 0 auto;
+			width: 55%;
+			text-align: center;
+		}
+		.btn{
+			background: orange;
+		}
+		.content{
+			width: 100%;
+			height: 10000px;
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+		.stabmenubg{
+			height: 200px;
+			width: 100%;
+			background: url(images/stabmenubg.png);
+			background-size: cover;
+			margin-left: 1%;
+			flex: 0 0 24%;
+		}
+		.stabmenubg2{
+			height: 80px;
+			width: 100%;
+			background: url(images/skmenubg.png);
+			background-size: 100% 80px;
+			margin-left: 1%;
+			flex: 0 0 32%;
+		}
+		.size{
+			font-size: 280%;
+			margin-top: 10%;
+		}
+		.martp{
+			margin-top: 9%;
+		}
+		.sizeds1{
+			font-size: 150%;
+		}
+		.contentds{
+			margin-top: 15%;
+		}
+		.size12{
+			font-size: 12px;
+		}
+		.videobg{
+			background: url(images/videobg.jpg);
+			height: 600px;
+			width: 100%;
+			background-size: 100% 600px;
+		}
+		.couterbg{
+			background: url(images/counterbg.jpg);
+			height: 400px;
+			width: 100%;
+			background-size: 100% 100%;
+		}
+		.iconbg{
+			background: url(images/info_iconbg.png);
+			height: 70px;
+			width: 100%;
+			background-size: 100% 100%;
+		}
+		.nenanh{
+			position: relative;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			overflow: hidden;
+			cursor: pointer;
+			display: inline-block;
+			color: black;
+		}
+		.nenanh img{
+			width: 100%;
+		}
+		.nenanh:hover .stabmenubghv{
+			display: block;
+		}
+		.nenanh:hover>div{
+			color: white;
+		}
+		.stabmenubghv{
+			display: none;
+			transition: .5s;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		.nenanh>div{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			text-align: center;
+			transition: .5s;
+		}
+		.nenanh>div>i{
+		    margin-top: 15%;
+		    font-size: 160%;
+		}
+		.nenanh>div>p{
+			font-size: 12px;
+			margin-top: 5%;
+		}
+		#thanhtieude{
+			width: 200px;
+			height: 2px;
+		}
+		#thanhtieude>.progress-bar{
+			background-color: #ff7200;
+		}
+		#rowtab{
+			margin-top: 80px;
+		}
+		.tieudecon{
+			margin-bottom: 25px;
+			font-weight: bold;
+		}
+		#rowtab>div>p{
+			margin-top: 100px;
+			font-size: 12px;
+			line-height: 30px;
+		}
+		#hopbam2{
+			bottom: -60px;
+		}
+		#hopbam2 li{
+			width: 8px;
+			height: 8px;
+			margin-left: 8px;
+			margin-right: 8px;
+			border: 1px solid gray;
+		}
+		#hopbam2>.active{
+			background-color: #ff7200;
+		}
+		.thongtinanh{
+			color: gray;
+		}
+		.thongtinanh>h6{
+			font-weight: bold;
+		}
+		.thongtinanh>p{
+			font-size: 12px;
+			line-height: 30px;
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+		.thongtinanh>div>p{
+			font-size: 12px;
+		}
+		.thongtinanh>div>p>span{
+			font-weight: bold;
+		}
+		.nutbam2{
+			margin-top: 50px;
+			padding: 15px 30px;
+			border: 1px solid gray;
+			font-size: 12px;
+			color: black;
+			background-color: white;
+			cursor: pointer;
+			transition: .5s;
+			font-weight: bold;
+		}
+		.nutbam2:hover{
+			background-color: #ff7200;
+			color: white;
+		}
+		.bg{
+			margin-top: 10%;
+			background: url(images/testbg.jpg);
+			height: 400px;
+			width: 100%;
+			background-size: 100% 100%;
+		}
+		#mo3{
+			width: 100%;
+			height: 400px;
+			background: #00000099;
+		}
+		.bg2{
+			background: #3333;
+			height: 200px;
+			width: 100%;
+		}
+		.bg3{
+			width: 100%;
+			height: 650px;
+			background: url(images/contactbg.png);
+			background-size: 100% 100%;
+		}
+		.bg4{
+			height: 200px;
+			width: 100%;
+			background: url(images/mapbg.jpg);
+			background-size: 100% 100%;
+		}
+		#mo4{
+			width: 100%;
+			height: 200px;
+			background: #ffaf6bd6;
+		}
+		.bg5{
+			height: 500px;
+			width: 100%;
+			background: #333333;
+			color: white;
+		}
+		.hover1:hover{
+			color: orange;
+		}
+		.hover2:hover{
+			color: orange;
+		}
+		.hover3:hover{
+			color: orange;
+		}
+		.hover4:hover{
+			color: orange;
+		}
+		.hover5:hover{
+			color: orange;
+		}
+		.hover6:hover{
+			color: orange;
+		}
+		.hover7:hover{
+			color: orange;
+		}
+		.hover8:hover{
+			color: orange;
+		}
+		.locanh{
+			height: 1500px;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="container-fluid header">
+		<div id="mo" class="container-fluid">
+			<div class="row mar">
+				<div class="col-xl-7 menu">
+					<img src="images/logo.png" alt="">
+				</div>
+				<div class="col-xl-5 menu">
+					<nav class="nav nav-pills flex-column flex-sm-row" style="color: white">
+					  <a class="flex-sm-fill text-sm-center nav-link" href="#" style="color: white"><b>HOME</b></a>
+					  <a class="flex-sm-fill text-sm-center nav-link" href="#" style="color: white"><b>SERVICE</b></a>
+					  <a class="flex-sm-fill text-sm-center nav-link" href="#" style="color: white"><b>TEAMS</b></a>
+					  <a class="flex-sm-fill text-sm-center nav-link" href="#" style="color: white"><b>WORKS</b></a>
+					  <a class="flex-sm-fill text-sm-center nav-link" href="#" style="color: white"><b>TESTIMONIAL</b></a>
+					  <a class="flex-sm-fill text-sm-center nav-link" href="#" style="color: white"><b>CONTACT</b></a>
+					  <a class="flex-sm-fill text-sm-center nav-link" href="#" style="color: white"><b><i class="fa fa-search" aria-hidden="true"></i></a></b>
+					</nav>
+				</div>
+				<div class="col-xl-12 text-center" style="color: white">
+					<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+						  <div class="carousel-inner">
+						    <div class="carousel-item active">
+						        <div class="row text-center">
+									<div class="text1" class="col-xl-12">
+										<br><br>
+										<p class="mar1">WELCOME TO OUR LOGIC</p>
+									</div>
+									<div class="text12" class="col-xl-12">
+										<br>
+										Start bootstrap can help you build better website using the Bootstrap 
+									</div>
+									<div class="text1" class="col-xl-12">
+										<button type="button" class="btn" style="color: white">LEARN MORE</button>
+									</div>
+								</div>
+						    </div>
+						    <div class="carousel-item">
+						        <div class="row text-center">
+									<div class="text1" class="col-xl-12">
+										<br><br>
+										<p class="mar1">WELCOME TO OUR LOGIC</p>
+									</div>
+									<div class="text12" class="col-xl-12">
+										<br>
+										Start bootstrap can help you build strap 
+									</div>
+									<div class="text1" class="col-xl-12">
+										<button type="button" class="btn" style="color: white">LEARN MORE</button>
+									</div>
+								</div>
+						    </div>
+						    <div class="carousel-item">
+						        <div class="row text-center">
+									<div class="text1" class="col-xl-12">
+										<br><br>
+										<p class="mar1">WELCOME TO OUR LOGIC</p>
+									</div>
+									<div class="text12" class="col-xl-12">
+										<br>
+										Start bootstrap can help you build  Bootstrap 
+									</div>
+									<div class="text1" class="col-xl-12">
+										<button type="button" class="btn" style="color: white">LEARN MORE</button>
+									</div>
+								</div>
+						    </div>
+						  </div>
+					</div>
+				</div>
+				<div class="col-xl-12 text-center" style="color: white" class="carousel-indicators">
+					<br><br><br>
+					<i class="fa fa-circle" aria-hidden="true" data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></i>
+					<i class="fa fa-circle" aria-hidden="true" data-target="#carouselExampleIndicators" data-slide-to="1"></i>
+					<i class="fa fa-circle" aria-hidden="true" data-target="#carouselExampleIndicators" data-slide-to="2"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid content">
+		<div class="row mar">
+			<div class="container">
+				<ul class="row nav nav-pills" style="list-style: none;">
+					<li class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-6 nav-item">
+						<a class="nenanh active" data-toggle="tab" href="#web" role="tab" aria-selected="true">
+							<img src="images/stabmenubg.png" alt="">
+							<img class="stabmenubghv" src="images/stabmenubghv.png" alt="">
+							<div >
+								<i class="fa fa-map-marker" aria-hidden="true"></i>
+								<p>WEB DESIGN</p>
+							</div>
+						</a>
+					</li>
+					<li class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-6 nav-item">
+						<a class="nenanh" data-toggle="tab" href="#app" role="tab" aria-selected="false">
+							<img src="images/stabmenubg.png" alt="">
+							<img class="stabmenubghv" src="images/stabmenubghv.png" alt="">
+							<div>
+								<i class="fa fa-map-marker" aria-hidden="true"></i>
+								<p>APP DESIGN</p>
+							</div>
+						</a>
+					</li>
+					<li class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-6 nav-item">
+						<a class="nenanh" data-toggle="tab" href="#graphic" role="tab" aria-selected="false">
+							<img src="images/stabmenubg.png" alt="">
+							<img class="stabmenubghv" src="images/stabmenubghv.png" alt="">
+							<div>
+								<i class="fa fa-map-marker" aria-hidden="true"></i>
+								<p>GRAPHIC DESIGN</p>
+							</div>
+						</a>
+					</li>
+					<li class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-6 nav-item">
+						<a class="nenanh" data-toggle="tab" href="#game" role="tab" aria-selected="false">
+							<img src="images/stabmenubg.png" alt="">
+							<img class="stabmenubghv" src="images/stabmenubghv.png" alt="">
+							<div>
+								<i class="fa fa-map-marker" aria-hidden="true"></i>
+								<p>GAME DESIGN</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="container">
+				<div class="tab-content">
+		  			<div class="tab-pane fade show active" id="web">
+		  				<div class="row" id="rowtab">
+		  					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+		  						<h5 class="tieudecon">WEB DESIGN ONE</h5>
+		  						<div class="progress" id="thanhtieude">
+		  							<div class="progress-bar" role="progressbar" style="width: 30%"></div>
+								</div>
+								<p>Suscipit voluptates, magnam doloremque facere hic? Vitae accusamus, dicta possimus maxime aperiam saepe porro, quas repudiandae! Vel repellat unde ullam vitae at voluptas hic, architecto aut quaerat esse voluptatibus incidunt in, Dolore mollitia molestias laborum voluptatem, eum aliquid, at consectetur ipsa numquam obcaecati quia nisi accusamus! ipsum dolor sit amet.</p>
+								<button type="button" class="nutbam">LEARN MORE</button>
+		  					</div>
+		  					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+		  						<img src="images/stab1.png" alt="">
+		  					</div>
+		  				</div>
+		  			</div>
+		  			<div class="tab-pane fade" id="app">
+		  				<div class="row" id="rowtab">
+		  					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+		  						<h5 class="tieudecon">WEB DESIGN TWO</h5>
+		  						<div class="progress" id="thanhtieude">
+		  							<div class="progress-bar" role="progressbar" style="width: 30%"></div>
+								</div>
+								<p>Suscipit voluptates, magnam doloremque facere hic? Vitae accusamus, dicta possimus maxime aperiam saepe porro, quas repudiandae! Vel repellat unde ullam vitae at voluptas hic, architecto aut quaerat esse voluptatibus incidunt in, Dolore mollitia molestias laborum voluptatem, eum aliquid, at consectetur ipsa numquam obcaecati quia nisi accusamus! ipsum dolor sit amet.</p>
+								<button type="button" class="nutbam">LEARN MORE</button>
+		  					</div>
+		  					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+		  						<img src="images/pf1.jpg" alt="">
+		  					</div>
+		  				</div>
+		  			</div>
+		  			<div class="tab-pane fade" id="graphic">
+		  				<div class="row" id="rowtab">
+		  					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+		  						<h5 class="tieudecon">WEB DESIGN THREE</h5>
+		  						<div class="progress" id="thanhtieude">
+		  							<div class="progress-bar" role="progressbar" style="width: 30%"></div>
+								</div>
+								<p>Suscipit voluptates, magnam doloremque facere hic? Vitae accusamus, dicta possimus maxime aperiam saepe porro, quas repudiandae! Vel repellat unde ullam vitae at voluptas hic, architecto aut quaerat esse voluptatibus incidunt in, Dolore mollitia molestias laborum voluptatem, eum aliquid, at consectetur ipsa numquam obcaecati quia nisi accusamus! ipsum dolor sit amet.</p>
+								<button type="button" class="nutbam">LEARN MORE</button>
+		  					</div>
+		  					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+		  						<img src="images/pf6.jpg" alt="">
+		  					</div>
+		  				</div>
+		  			</div>
+		  			<div class="tab-pane fade" id="game">
+		  				<div class="row" id="rowtab">
+		  					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+		  						<h5 class="tieudecon">WEB DESIGN FOUR</h5>
+		  						<div class="progress" id="thanhtieude">
+		  							<div class="progress-bar" role="progressbar" style="width: 30%"></div>
+								</div>
+								<p>Suscipit voluptates, magnam doloremque facere hic? Vitae accusamus, dicta possimus maxime aperiam saepe porro, quas repudiandae! Vel repellat unde ullam vitae at voluptas hic, architecto aut quaerat esse voluptatibus incidunt in, Dolore mollitia molestias laborum voluptatem, eum aliquid, at consectetur ipsa numquam obcaecati quia nisi accusamus! ipsum dolor sit amet.</p>
+								<button type="button" class="nutbam">LEARN MORE</button>
+		  					</div>
+		  					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+		  						<img src="images/pf1.jpg" alt="">
+		  					</div>
+		  				</div>
+		  			</div>
+				</div>
+			</div>
+		</div>
+		<div class="row mar" style="margin-top: 10%;">
+			<div class="col-xl-6">
+				<h5 class="tieudecon">
+					FEATUAR DESIGN
+				</h5>
+		  		<div class="progress" id="thanhtieude">
+		  			<div class="progress-bar" role="progressbar" style="width: 30%"></div>
+				</div>
+				<div class="col-xl-12" style="margin-top:10%;">
+					<div id="demo" class="carousel slide" data-ride="carousel">
+					  <!-- Indicators -->
+					  <ul class="carousel-indicators">
+					    <li data-target="#demo" data-slide-to="0" class="active"></li>
+					    <li data-target="#demo" data-slide-to="1"></li>
+					    <li data-target="#demo" data-slide-to="2"></li>
+					  </ul>
+
+					  <!-- The slideshow -->
+					  <div class="carousel-inner">
+					    <div class="carousel-item active">
+					      <img src="images/pf6.jpg" alt="Los Angeles">
+					    </div>
+					    <div class="carousel-item">
+					      <img src="images/pf1.jpg" alt="Chicago">
+					    </div>
+					    <div class="carousel-item">
+					      <img src="images/pf6.jpg" alt="New York">
+					    </div>
+					  </div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6" style="margin-top: 9%; color: #3d373761;">
+				<b>HAND WITH A WATCH</b>
+				<p style="margin-top: 10%;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quae ad, eius, nam sunt alias. Iusto assumenda voluptatum illo quos itaque aspernatur nemo est voluptatibus dolore qui, repudiandae iste unde.</p>
+				<p><b>Client:</b> Dadit Lorm</p>
+				<p><b>Deivered:</b> Sunday, 15 August, 2015</p>
+				<p><b>Tags:</b> Hand, Watch, Black, Tree</p>
+				<div class="col-xl-12" style="">
+					<button type="button" class="btn" style="color: #3d373761; background: white; border: solid 1px;">LAUCH NOW </button>
+				</div>
+			</div>
+		</div>
+		<div class="row container-fluid" style="padding-top: 5%; margin: 0;">
+			<div class="col-xl-12 videobg text-center" style="color: white">
+				<div id="mo1">
+					<i class="fa fa-play-circle-o" aria-hidden="true" style="font-size: 1000%; margin-top: 12%;"></i>
+					<p style="font-size: 150%;"><b>WATCH OUR INTRO</b></p>
+				</div>
+			</div>
+		</div>
+		<div class="row mar container-fluid" style="padding-top: 5%;">
+			<div class="col-xl-6">
+				<h5 class="tieudecon">
+					ABOUT LOGIC
+				</h5>
+		  		<div class="progress" id="thanhtieude">
+		  			<div class="progress-bar" role="progressbar" style="width: 30%"></div>
+				</div>
+				<div class="col-xl-12">
+					<div class="row">
+						<div class="col-xl-3 hai" style="padding-top: 16%;">
+							<img src="images/iconbg1.png" alt="" style="position: relative;" class="hai2">
+							<i class="fa fa-coffee size" aria-hidden="true" style="padding-top: 5%; position: absolute; left: 18px; right: 0"></i>
+						</div>
+						<div class="col-xl-9" style="margin-top: 14%; color: #3d373761;">
+							<p style="font-size: 150%;"><b>RESPONSIVE DESIGN</b></p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, libero!</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, libero!</p>
+						</div>
+						<div class="col-xl-3 hai1" style="padding-top: 10%;">
+							<img src="images/iconbg1.png" alt="" style="position: relative;" class="hai22">
+							<i class="fa fa-coffee size" aria-hidden="true" style="padding-top: 5%; position: absolute; left: 18px; right: 0"></i>
+						</div>
+						<div class="col-xl-9" style="margin-top: 8%; color: #3d373761;">
+							<p style="font-size: 150%;"><b>RESPONSIVE DESIGN</b></p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, libero!</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, libero!</p>
+						</div>
+						<div class="col-xl-3 hai11" style="padding-top: 10%;">
+							<img src="images/iconbg1.png" alt="" style="position: relative;" class="hai222">
+							<i class="fa fa-coffee size" aria-hidden="true" style="padding-top: 5%; position: absolute; left: 18px; right: 0"></i>
+						</div>
+						<div class="col-xl-9" style="margin-top: 8%; color: #3d373761;">
+							<p style="font-size: 150%;"><b>RESPONSIVE DESIGN</b></p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, libero!</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, libero!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 abright">
+				<img src="images/abright.png" alt="" style="margin-left: 15%; height: 750px;">
+			</div>
+		</div>
+		<div class="row container-fluid mar" style="margin-top: 10%;">
+			<div class="col-xl-6">
+				<div class="container">
+					<ul class="row nav nav-pills" style="list-style: none;">
+						<li class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-6 nav-item">
+							<a class="nenanh active" data-toggle="tab" href="#web" role="tab" aria-selected="true">
+								<img src="images/skmenubg.png" alt="">
+								<img class="stabmenubghv" src="images/skmenubgh.png" alt="">
+								<div>
+									<p><b>WEB DESIGN</b></p>
+								</div>
+							</a>
+						</li>
+						<li class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-6 nav-item" style="margin-left: 5%;">
+							<a class="nenanh" data-toggle="tab" href="#app" role="tab" aria-selected="false">
+								<img src="images/skmenubg.png" alt="">
+								<img class="stabmenubghv" src="images/skmenubgh.png" alt="">
+								<div>
+									<p><b>APP DESIGN</b></p>
+								</div>
+							</a>
+						</li>
+						<li class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-6 nav-item" style="margin-left: 5%;">
+							<a class="nenanh" data-toggle="tab" href="#graphic" role="tab" aria-selected="false">
+								<img src="images/skmenubg.png" alt="">
+								<img class="stabmenubghv" src="images/skmenubgh.png" alt="">
+								<div>
+									<p><b>GRAPHIC DESIGN</b></p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="container">
+					<div class="tab-content">
+			  			<div class="tab-pane fade show active" id="web">
+			  				<div class="row" id="rowtab" style="margin-top: 0 !important;">
+			  					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+									<p>Suscipit voluptates, magnam doloremque facere hic? Vitae accusamus, dicta possimus maxime aperiam saepe porro, quas repudiandae! Vel repellat unde ullam vitae at voluptas hic, architecto aut quaerat esse voluptatibus incidunt in, Dolore mollitia molestias laborum voluptatem, eum aliquid, at consectetur ipsa numquam obcaecati quia nisi accusamus! ipsum dolor sit amet.</p>
+			  					</div>
+			  				</div>
+			  			</div>
+					</div>
+				</div>
+				<div class="row" style="padding-top: 4%; color: #3d373761;">
+					<div class="col-xl-6">
+						<i class="fa fa-check-square" aria-hidden="true"></i> We just want to love our client
+					</div>
+					<div class="col-xl-6">
+						<i class="fa fa-check-square" aria-hidden="true"></i> We just want to love our client
+					</div>
+				</div>
+				<div class="row" style="padding-top: 1%; color: #3d373761;">
+					<div class="col-xl-6">
+						<i class="fa fa-check-square" aria-hidden="true"></i> We just want to love our client
+					</div>
+					<div class="col-xl-6">
+						<i class="fa fa-check-square" aria-hidden="true"></i> We just want to love our client
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 container-fluid">
+				<div class="row container-fluid" style="margin-left: 0 !important; margin-right: 0 !important;">
+					<div class="col-xl-10">
+						<p style="margin-left: 5%; font-size: 200%;">PHOTOSHOP</p>
+					</div>
+					<div class="col-xl-2">
+						<p style="font-size: 200%">79%</p>
+					</div>
+					<div class="col-xl-12">
+						<div class="progress" style="margin-left: 5%; height: 0.5rem">
+							 <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
+							 aria-valuemin="0" aria-valuemax="100" style="width:79%; background-color: orange">
+							 </div>
+						</div>
+					</div>
+				</div>
+				<div class="row container-fluid" style="margin-left: 0 !important;margin-top: 5%; margin-right: 0 !important;">
+					<div class="col-xl-10">
+						<p style="margin-left: 5%; font-size: 200%;">HTML/CSS</p>
+					</div>
+					<div class="col-xl-2">
+						<p style="font-size: 200%">90%</p>
+					</div>
+					<div class="col-xl-12">
+						<div class="progress" style="margin-left: 5%; height: 0.5rem">
+							 <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
+							 aria-valuemin="0" aria-valuemax="100" style="width:90%; background-color: orange">
+							 </div>
+						</div>
+					</div>
+				</div>
+				<div class="row container-fluid" style="margin-left: 0 !important;margin-top: 5%; margin-right: 0 !important;">
+					<div class="col-xl-10">
+						<p style="margin-left: 5%; font-size: 200%;">JAVASCRIPT</p>
+					</div>
+					<div class="col-xl-2">
+						<p style="font-size: 200%">69%</p>
+					</div>
+					<div class="col-xl-12">
+						<div class="progress" style="margin-left: 5%; height: 0.5rem">
+							 <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
+							 aria-valuemin="0" aria-valuemax="100" style="width:69%; background-color: orange">
+							 </div>
+						</div>
+					</div>
+				</div>
+				<div class="row container-fluid" style="margin-left: 0 !important;margin-top: 5%; margin-right: 0 !important;">
+					<div class="col-xl-10">
+						<p style="margin-left: 5%; font-size: 200%;">WORDPRESS</p>
+					</div>
+					<div class="col-xl-2">
+						<p style="font-size: 200%">92%</p>
+					</div>
+					<div class="col-xl-12">
+						<div class="progress" style="margin-left: 5%; height: 0.5rem">
+							 <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
+							 aria-valuemin="0" aria-valuemax="100" style="width:92%; background-color: orange">
+							 </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row container-fluid couterbg" style="margin: 0; margin-top: 5%; color: white">
+			<div id="mo2">
+				<div class="col-xl-12 mar">
+					<div class="row text-center" style="padding-top: 8%;">
+						<div class="col-xl-3">
+							<p><b style="font-size: 300%;"><span class="counter">561</span></b></p>
+							<p><i class="fa fa-thumbs-o-up" aria-hidden="true" style="font-size: 300%; color: orange;"></i></p>
+							<p>CREATIVE DESIGN</p>
+						</div>
+						<div class="col-xl-3">
+							<p><b style="font-size: 300%;"><span class="counter">561</span></b></p>
+							<p><i class="fa fa-star" aria-hidden="true" style="font-size: 300%; color: orange;"></i></p>
+							<p>CREATIVE DESIGN</p>
+						</div>
+						<div class="col-xl-3">
+							<p><b style="font-size: 300%;"><span class="counter">561</span></b></p>
+							<p><i class="fa fa-thumbs-o-up" aria-hidden="true" style="font-size: 300%; color: orange;"></i></p>
+							<p>CREATIVE DESIGN</p>
+						</div>
+						<div class="col-xl-3">
+							<p><b style="font-size: 300%;"><span class="counter">561</span></b></p>
+							<p><i class="fa fa-thumbs-o-up" aria-hidden="true" style="font-size: 300%; color: orange;"></i></p>
+							<p>CREATIVE DESIGN</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row container-fluid mar" style="padding-top: 5%">
+			<div class="col-xl-12">
+				<div>
+					<b class="sizeds1">THER SERVICES</b>
+				</div>
+				<div class="progress" style="height: 0.2rem; width: 10%; margin-top: 2%;">
+					 <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
+					 aria-valuemin="0" aria-valuemax="100" style="width:30%; background-color: orange">
+					 </div>
+				</div>
+			</div>
+			<div class="row container-fluid" style="padding-top: 10%;">
+				<div class="col-xl-4" style="flex: 0 0 31%; margin-left: 2%;">
+					<div class="row">
+						<div class="col-xl-2">
+							<img src="images/info_iconbg.png" alt="" style="position: relative;" class="duc1">
+							<i class="fa fa-clock-o duc1" aria-hidden="true" style="position: absolute; left: 0 ; font-size: 200%; padding-top: 14%;"></i>
+						</div>
+						<div class="col-xl-10">
+							<p style="padding-top: 5%; font-size: 150%; color: #3d373761;">CREATIVE DESIGN</p>
+						</div>
+						<div class="col-xl-12" style="padding-top: 2%; color: #3d373761">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, ratione.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4" style="flex: 0 0 31%; margin-left: 2%;">
+					<div class="row">
+						<div class="col-xl-2">
+							<img src="images/info_iconbg.png" alt="" style="position: relative;" class="duc2">
+							<i class="fa fa-clock-o duc2" aria-hidden="true" style="position: absolute; left: 0 ; font-size: 200%; padding-top: 14%;"></i>
+						</div>
+						<div class="col-xl-10">
+							<p style="padding-top: 5%; font-size: 150%; color: #3d373761;">CREATIVE DESIGN</p>
+						</div>
+						<div class="col-xl-12" style="padding-top: 2%; color: #3d373761">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, ratione.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4" style="flex: 0 0 31%; margin-left: 2%;">
+					<div class="row">
+						<div class="col-xl-2">
+							<img src="images/info_iconbg.png" alt="" style="position: relative;" class="duc3">
+							<i class="fa fa-clock-o duc3" aria-hidden="true" style="position: absolute; left: 0 ; font-size: 200%; padding-top: 14%;"></i>
+						</div>
+						<div class="col-xl-10">
+							<p style="padding-top: 5%; font-size: 150%; color: #3d373761;">CREATIVE DESIGN</p>
+						</div>
+						<div class="col-xl-12" style="padding-top: 2%; color: #3d373761">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, ratione.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4" style="flex: 0 0 31%; margin-left: 2%;">
+					<div class="row">
+						<div class="col-xl-2">
+							<img src="images/info_iconbg.png" alt="" style="position: relative;" class="duc4">
+							<i class="fa fa-clock-o duc4" aria-hidden="true" style="position: absolute; left: 0 ; font-size: 200%; padding-top: 14%;"></i>
+						</div>
+						<div class="col-xl-10">
+							<p style="padding-top: 5%; font-size: 150%; color: #3d373761;">CREATIVE DESIGN</p>
+						</div>
+						<div class="col-xl-12" style="padding-top: 2%; color: #3d373761">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, ratione.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4" style="flex: 0 0 31%; margin-left: 2%;">
+					<div class="row">
+						<div class="col-xl-2">
+							<img src="images/info_iconbg.png" alt="" style="position: relative;" class="duc5">
+							<i class="fa fa-clock-o duc5" aria-hidden="true" style="position: absolute; left: 0 ; font-size: 200%; padding-top: 14%;"></i>
+						</div>
+						<div class="col-xl-10">
+							<p style="padding-top: 5%; font-size: 150%; color: #3d373761;">CREATIVE DESIGN</p>
+						</div>
+						<div class="col-xl-12" style="padding-top: 2%; color: #3d373761">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, ratione.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4" style="flex: 0 0 31%; margin-left: 2%;">
+					<div class="row">
+						<div class="col-xl-2">
+							<img src="images/info_iconbg.png" alt="" style="position: relative;" class="duc6">
+							<i class="fa fa-clock-o duc6" aria-hidden="true" style="position: absolute; left: 0 ; font-size: 200%; padding-top: 14%;"></i>
+						</div>
+						<div class="col-xl-10">
+							<p style="padding-top: 5%; font-size: 150%; color: #3d373761;">CREATIVE DESIGN</p>
+						</div>
+						<div class="col-xl-12" style="padding-top: 2%; color: #3d373761">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, ratione.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row container-fluid mar" style="padding-top: 10%;">
+			<div class="col-xl-12">
+				<div>
+					<b class="sizeds1">THER SERVICES</b>
+				</div>
+				<div class="progress" style="height: 0.2rem; width: 10%; margin-top: 2%;">
+					 <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
+					 aria-valuemin="0" aria-valuemax="100" style="width:30%; background-color: orange">
+					 </div>
+				</div>
+			</div>
+			<div class="row container-fluid mar" style="margin-top: 10%; flex: 0 0 100%">
+				<div class="col-xl-3">		
+					<img src="images/team1.jpg" alt="" style="margin-left: 1%;">
+				</div>
+				<div class="col-xl-3">		
+					<img src="images/team2.jpg" alt="" style="margin-left: 1%;">
+				</div>
+				<div class="col-xl-3">		
+					<img src="images/team3.jpg" alt="" style="margin-left: 1%;">
+				</div>
+				<div class="col-xl-3">		
+					<img src="images/team4.jpg" alt="" style="margin-left: 1%;">
+				</div>
+			</div>
+		</div>
+		<div class="row container-fluid mar" style="padding-top: 10%;">
+			<div class="col-xl-6">
+				<div class="col-xl-12">
+					<div>
+						<b class="sizeds1">THER SERVICES</b>
+					</div>
+					<div class="progress" style="height: 0.2rem; width: 10%; margin-top: 2%;">
+						 <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
+						 aria-valuemin="0" aria-valuemax="100" style="width:30%; background-color: orange">
+						 </div>
+					</div>
+				</div>
+				<div class="row container-fluid">
+					<div class="col-xl-12 container-fluid" style="margin-top: 15%;">
+						<div class="row">
+							<div id="accordion" style="width: 600px; margin-left: 5%;">
+							  <div class="card col-xl-12">
+							    <div class="card-header"  style="background: white">
+							      <a class="card-link" data-toggle="collapse" href="#collapseOne" style="color: black">
+							        <img src="images/ch_col_icn.png" alt="" style="position: relative;" class="tran1">
+							        <i class="fa fa-picture-o tran1" aria-hidden="true" style="position: absolute; left: 2%; padding-top: 2%; font-size: 150%; color: black"></i>
+							       	CREATIVE DESIGN
+							      </a>
+							    </div>
+							    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+							      <div class="card-body" style="color: #3d373761">
+							        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus suscipit quia ratione ipsum fugiat, voluptates expedita dolorum natus. Ipsam, dolores.
+							      </div>
+							    </div>
+							  </div>
+							  <div class="card">
+							    <div class="card-header" style="background: white">
+							      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo" style="color: black">
+							        <img src="images/ch_col_icn.png" alt="" style="position: relative;" class="tran2">
+							        <i class="fa fa-picture-o tran2" aria-hidden="true" style="position: absolute; left: 2%; padding-top: 2%; font-size: 150%; color: black"></i>
+							       	REPONSIVE DESIGN
+							      </a>
+							    </div>
+							    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+							      <div class="card-body" style="color: #3d373761">
+							        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab vero adipisci aperiam labore quis cupiditate minus expedita commodi, ipsam ipsum. Quos sunt quae repellendus ab molestias laboriosam delectus molestiae deserunt!
+							      </div>
+							    </div>
+							  </div>
+
+							  <div class="card">
+							    <div class="card-header" style="background: white">
+							      <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree" style="color: black">
+							        <img src="images/ch_col_icn.png" alt="" style="position: relative;" class="tran3">
+							        <i class="fa fa-picture-o tran3" aria-hidden="true" style="position: absolute; left: 2%; padding-top: 2%; font-size: 150%; color: black"></i>
+							       	RETINA READY
+							      </a>
+							    </div>
+							    <div id="collapseThree" class="collapse" data-parent="#accordion">
+							      <div class="card-body" style="color: #3d373761">
+							        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque a suscipit molestias asperiores porro cumque ducimus atque consequuntur. Quos, repellendus ipsa omnis laboriosam esse? Officiis aliquid natus, quisquam debitis dolorum consequatur, rem repellendus necessitatibus obcaecati harum repellat explicabo possimus, voluptatem.
+							      </div>
+							    </div>
+							  </div>
+
+							  <div class="card">
+							    <div class="card-header" style="background: white">
+							      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour" style="color: black">
+							        <img src="images/ch_col_icn.png" alt="" style="position: relative;" class="tran4">
+							        <i class="fa fa-picture-o tran4" aria-hidden="true" style="position: absolute; left: 2%; padding-top: 2%; font-size: 150%; color: black"></i>
+							       	FREE GOOGLE FONT
+							      </a>
+							    </div>
+							    <div id="collapseFour" class="collapse" data-parent="#accordion">
+							      <div class="card-body" style="color: #3d373761">
+							        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae facere ipsam, voluptatem amet illo sed commodi cumque natus possimus quaerat quas eligendi dolorem labore perferendis magnam ratione architecto impedit earum incidunt dolorum modi temporibus ducimus, consequuntur vitae, tenetur. Iste vel libero aut similique quis quidem modi odit explicabo repellat veritatis.
+							      </div>
+							    </div>
+							  </div>
+
+							  <div class="card">
+							    <div class="card-header" style="background: white">
+							      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFive" style="color: black">
+							        <img src="images/ch_col_icn.png" alt="" style="position: relative;" class="tran5">
+							        <i class="fa fa-picture-o tran5" aria-hidden="true" style="position: absolute; left: 2%; padding-top: 2%; font-size: 150%; color: black"></i>
+							       	1170 PX GRID BASE
+							      </a>
+							    </div>
+							    <div id="collapseFive" class="collapse" data-parent="#accordion">
+							      <div class="card-body" style="color: #3d373761">
+							        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque voluptatum incidunt consequuntur accusamus, unde fugit vel velit sunt saepe praesentium harum asperiores est quam aliquid eius laboriosam. Magni necessitatibus magnam nemo, corporis nulla incidunt in nam beatae dolores, assumenda ad, suscipit nobis voluptatibus minima delectus, doloremque tempore est possimus recusandae! Officiis ut quisquam aliquid voluptatibus veritatis deleniti alias suscipit, aspernatur?
+							      </div>
+							    </div>
+							  </div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6">
+				<img src="images/choose.png" alt="" style=" width: 100%; ">
+			</div>
+		</div>
+		<!--ĐÂY A ƠI->
+					<--...-->
+		<div class="locanh" style="margin-top: 5%">
+			<div class="work">
+			  <div class="category-buttons">
+			    <a href="#" class="active all" data-group="all">All</a>
+			    <a href="#" data-group="city">city</a>
+			    <a href="#" data-group="nature">nature</a>
+			    <a href="#" data-group="food">food</a>
+			  </div>
+			  <div id="grid" class="grid">
+			    <a class="card" href="#" data-groups="city,">
+			      <img src="images/pf1.jpg" />
+			    </a>
+			    <a class="card" href="#" data-groups="nature,">
+			      <img src="images/pf2.jpg" />
+			    </a>
+			    <a class="card" href="#" data-groups="food,">
+			      <img src="images/pf3.jpg" />
+			    </a>
+			    <a class="card" href="#" data-groups="food,">
+			      <img src="images/pf1.jpg" />
+			    </a>
+			    <a class="card" href="#" data-groups="city,,">
+			      <img src="images/pf6.jpg" />
+			    </a>
+			    <a class="card" href="#" data-groups="nature,food,">
+			      <img src="images/pf7.jpg" />
+			    </a>
+			    <a class="card" href="#" data-groups="food,">
+			      <img src="images/pf8.jpg" />
+			    </a>
+			    <a class="card" href="#" data-groups="food,">
+			      <img src="images/pf2.jpg" />
+			    </a>
+			    <div class="guide"></div>
+			  </div>
+			</div>
+		</div>
+		<div class="bg">
+			<div id="mo3">
+				<div class="row container-fluid mar">
+					<div class="col-xl-12 text-center" style="color: white;">
+						<i class="fa fa-quote-right" aria-hidden="true" style="font-size: 200%; padding-top: 5%;"></i>
+						<div class="col-xl-12 text-center" style="color: white">
+							<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+								  <div class="carousel-inner">
+								    <div class="carousel-item active">
+								        <div class="row text-center">
+											<div class="text12" class="col-xl-12">
+												<br>
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis quia magnam amet voluptate ad error animi voluptatibus, repellat facere possimus natus, veniam recusandae quaerat quidem nemo, consectetur iusto assumenda velit. Laboriosam, eos delectus quis necessitatibus, ab, laborum rerum aperiam nostrum sequi doloribus voluptas iure. Fugit id inventore maxime doloribus excepturi.
+											</div>
+										</div>
+								    </div>
+								    <div class="carousel-item">
+								        <div class="row text-center">
+											<div class="text12" class="col-xl-12">
+												<br>
+												Start bootstrap can help you build strap 
+											</div>
+										</div>
+								    </div>
+								    <div class="carousel-item">
+								        <div class="row text-center">
+											<div class="text12" class="col-xl-12">
+												<br>
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quos harum error non, perspiciatis, fugit omnis, placeat debitis consectetur laboriosam reprehenderit minima quam ad nesciunt voluptatem. Voluptates aperiam dolores ipsam officiis a architecto enim laboriosam quam, impedit illum beatae perferendis pariatur excepturi culpa expedita magni similique assumenda explicabo veritatis porro ad. Deleniti debitis, possimus vero, voluptas id nam atque ex.
+											</div>
+										</div>
+								    </div>
+								  </div>
+							</div>
+							<div class="col-xl-12 text-center" style="color: white" class="carousel-indicators">
+								<br><br><br>
+								<i class="fa fa-circle" aria-hidden="true" data-target="#carouselExampleIndicators" data-slide-to="6" class="active"></i>
+								<i class="fa fa-circle" aria-hidden="true" data-target="#carouselExampleIndicators" data-slide-to="7"></i>
+								<i class="fa fa-circle" aria-hidden="true" data-target="#carouselExampleIndicators" data-slide-to="8"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bg2">
+			<div class="row mar container-fluid" style="padding-top: 4%;">
+				<div class="col-xl-2">
+					<img src="images/clogo1.png" alt="">
+				</div>
+				<div class="col-xl-2">
+					<img src="images/clogo2.png" alt="">
+				</div>
+				<div class="col-xl-2">
+					<img src="images/clogo3.png" alt="">
+				</div>
+				<div class="col-xl-2">
+					<img src="images/clogo4.png" alt="">
+				</div>
+				<div class="col-xl-2">
+					<img src="images/clogo5.png" alt="">
+				</div>
+				<div class="col-xl-2">
+					<img src="images/clogo9.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="bg3">
+			<div class="row mar container-fluid" style="margin-top: 5%;">
+				<div class="col-xl-6">
+					<h5 class="tieudecon">CONTACT INFO</h5>
+		  			<div class="progress" id="thanhtieude">
+		  				<div class="progress-bar" role="progressbar" style="width: 30%"></div>
+					</div>
+					<div class="row col-xl-12" style="padding-top: 20%;">
+						<div class="col-xl-2">
+							<img class="tuan1" src="images/iconbg2.png" alt="" style="position: relative;">
+							<i class="fa fa-envelope tuan1" aria-hidden="true" style="position: absolute; left: 12%; font-size: 200%; margin-top: 12%;"></i>
+						</div>
+						<div class="col-xl-10" style="margin-top: 2%">
+							<b>MAIL US</b><br>
+							support@yourmail.com
+						</div>
+					</div>
+					<div class="row col-xl-12" style="padding-top: 8%;">
+						<div class="col-xl-2">
+							<img class="tuan2" src="images/iconbg2.png" alt="" style="position: relative;">
+							<i class="fa fa-mobile tuan2" aria-hidden="true" style="position: absolute; left: 12%; font-size: 200%; margin-top: 12%;"></i>
+						</div>
+						<div class="col-xl-10" style="margin-top: 2%">
+							<b>CALL US</b><br>
+							0345439021
+						</div>
+					</div>
+					<div class="row col-xl-12" style="padding-top: 8%;">
+						<div class="col-xl-2">
+							<img class="tuan3" src="images/iconbg2.png" alt="" style="position: relative;">
+							<i class="fa fa-home tuan3" aria-hidden="true" style="position: absolute; left: 12%; font-size: 200%; margin-top: 12%;"></i>
+						</div>
+						<div class="col-xl-10" style="margin-top: 2%">
+							<b>VISIT US</b><br>
+							20.2 Eilzaben ST, Metbourne. Victoria 3000
+						</div>
+					</div>
+					<div class="row col-xl-12" style="padding-top: 8%;">
+						<div class="col-xl-2">
+							<img class="tuan4" src="images/iconbg2.png" alt="" style="position: relative;">
+							<i class="fa fa-clock-o tuan4" aria-hidden="true" style="position: absolute; left: 12%; font-size: 200%; margin-top: 12%;"></i>
+						</div>
+						<div class="col-xl-10" style="margin-top: 2%">
+							<b>WORK HOUR</b><br>
+							Mon - Sat. 08 Am - 17 Pm
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6">
+					<h5 class="tieudecon">LEAVE MESSAGE</h5>
+		  			<div class="progress" id="thanhtieude">
+		  				<div class="progress-bar" role="progressbar" style="width: 30%"></div>
+					</div>
+					<div class="row container-fluid" style="padding-top: 20%;">
+						<div class="col-xl-6">
+							<form action="">
+								<input type="text" placeholder="First Name">
+							</form>
+						</div>
+						<div class="col-xl-6">
+							<form action="">
+								<input type="text" placeholder="Last Name">
+							</form>
+						</div>
+					</div>
+					<div class="row container-fluid" style="padding-top: 2%;">
+						<div class="col-xl-6">
+							<form action="">
+								<input type="text" placeholder="Emaiil">
+							</form>
+						</div>
+						<div class="col-xl-6">
+							<form action="">
+								<input type="text" placeholder="Subject">
+							</form>
+						</div>
+					</div>
+					<div class="row container-fluid" style="padding-top: 5%">
+						<div class="col-xl-12">
+							<textarea name="" id="" cols="66" rows="10" placeholder="Message"></textarea>
+						</div>
+					</div>
+					<div class="row container-fluid">
+						<div class="col-xl-12">
+							<button  style="background: orange; width: 100px; height: 40px; color: white">submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bg4">
+			<div id="mo4" class="row container-fluid text-center mar">
+				<div class="col-xl-12" style="padding-top: 3%; color: white">
+					<p style="font-size: 200%;"><i class="fa fa-map-marker" aria-hidden="true"></i></p>
+					<h4><b>FIND US ON GOOGLE MAP</b></h4>
+				</div>
+			</div>
+		</div>
+		<div class="bg5">
+			<div class="row mar container-fluid" style="padding-top: 5%">
+				<div class="col-xl-3">
+					<p><img src="images/logo.png" alt=""></p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, doloribus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odio dignissimos maiores excepturi aspernatur incidunt ratione quis accusamus tenetur perspiciatis!</p>
+				</div>
+				<div class="col-xl-3">
+					<h6 class="tieudecon">SITEMAP</h6>
+		  			<div class="progress" id="thanhtieude">
+		  				<div class="progress-bar" role="progressbar" style="width: 20%"></div>
+					</div>
+					<br>
+					<p class="hover1">Sevices</p>
+					<p class="hover2">About Us</p>
+					<p class="hover3">Our team</p>
+					<p class="hover4">Portfollo</p>
+				</div>
+				<div class="col-xl-3">
+					<h6 class="tieudecon">ACHIVES</h6>
+		  			<div class="progress" id="thanhtieude">
+		  				<div class="progress-bar" role="progressbar" style="width: 20%"></div>
+					</div>
+					<br>
+					<p class="hover5">January 2015</p>
+					<p class="hover6">February 2015</p>
+					<p class="hover7">March 2015</p>
+					<p class="hover8">April 2015</p>
+				</div>
+				<div class="col-xl-3">
+					<h6 class="tieudecon">NEWSLETTER</h6>
+		  			<div class="progress" id="thanhtieude">
+		  				<div class="progress-bar" role="progressbar" style="width: 20%"></div>
+					</div>
+					<br>
+					<p>Sevices Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, laudantium.</p>
+					<p>
+						<form action="">
+							<input style="background: #333333" type="text" placeholder="Search&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->">
+						</form>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		$('.counter').counterUp({
+		  'time': 1000,
+		  'delay': 10
+		});
+		$('.hai').mouseover(function() {
+			$('.hai2').attr("src","images/iconbg1h.png")
+			$('.hai2').next().css("color","white")
+		})
+		$('.hai').mouseout(function() {
+			$('.hai2').attr("src","images/iconbg1.png")
+			$('.hai2').next().css("color","black")
+		})
+		$('.hai1').mouseover(function() {
+			$('.hai22').attr("src","images/iconbg1h.png")
+			$('.hai22').next().css("color","white")
+		})
+		$('.hai1').mouseout(function() {
+			$('.hai22').attr("src","images/iconbg1.png")
+			$('.hai22').next().css("color","black")
+		})
+		$('.hai11').mouseover(function() {
+			$('.hai222').attr("src","images/iconbg1h.png")
+			$('.hai222').next().css("color","white")
+		})
+		$('.hai11').mouseout(function() {
+			$('.hai222').attr("src","images/iconbg1.png")
+			$('.hai222').next().css("color","black")
+		})
+
+
+
+
+
+		$('.duc1').mouseover(function() {
+			$('.duc1').attr("src","images/ch_col_icn_h.png")
+			$('.duc1').next().css("color","white")
+		})
+		$('.duc1').mouseout(function() {
+			$('.duc1').attr("src","images/info_iconbg.png")
+			$('.duc1').next().css("color","black")
+		})
+		$('.duc2').mouseover(function() {
+			$('.duc2').attr("src","images/ch_col_icn_h.png")
+			$('.duc2').next().css("color","white")
+		})
+		$('.duc2').mouseout(function() {
+			$('.duc2').attr("src","images/info_iconbg.png")
+			$('.duc2').next().css("color","black")
+		})
+		$('.duc3').mouseover(function() {
+			$('.duc3').attr("src","images/ch_col_icn_h.png")
+			$('.duc3').next().css("color","white")
+		})
+		$('.duc3').mouseout(function() {
+			$('.duc3').attr("src","images/info_iconbg.png")
+			$('.duc3').next().css("color","black")
+		})
+		$('.duc4').mouseover(function() {
+			$('.duc4').attr("src","images/ch_col_icn_h.png")
+			$('.duc4').next().css("color","white")
+		})
+		$('.duc4').mouseout(function() {
+			$('.duc4').attr("src","images/info_iconbg.png")
+			$('.duc4').next().css("color","black")
+		})
+		$('.duc5').mouseover(function() {
+			$('.duc5').attr("src","images/ch_col_icn_h.png")
+			$('.duc5').next().css("color","white")
+		})
+		$('.duc5').mouseout(function() {
+			$('.duc5').attr("src","images/info_iconbg.png")
+			$('.duc5').next().css("color","black")
+		})
+		$('.duc6').mouseover(function() {
+			$('.duc6').attr("src","images/ch_col_icn_h.png")
+			$('.duc6').next().css("color","white")
+		})
+		$('.duc6').mouseout(function() {
+			$('.duc6').attr("src","images/info_iconbg.png")
+			$('.duc6').next().css("color","black")
+		})
+
+		$('.tran1').mouseover(function() {
+			$('.tran1').attr("src","images/ch_col_icn_h.png")
+			$('.tran1').next().css("color","white")
+		})
+		$('.tran1').mouseout(function() {
+			$('.tran1').attr("src","images/ch_col_icn.png")
+			$('.tran1').next().css("color","black")
+		})
+		$('.tran2').mouseover(function() {
+			$('.tran2').attr("src","images/ch_col_icn_h.png")
+			$('.tran2').next().css("color","white")
+		})
+		$('.tran2').mouseout(function() {
+			$('.tran2').attr("src","images/ch_col_icn.png")
+			$('.tran2').next().css("color","black")
+		})
+		$('.tran3').mouseover(function() {
+			$('.tran3').attr("src","images/ch_col_icn_h.png")
+			$('.tran3').next().css("color","white")
+		})
+		$('.tran3').mouseout(function() {
+			$('.tran3').attr("src","images/ch_col_icn.png")
+			$('.tran3').next().css("color","black")
+		})
+		$('.tran4').mouseover(function() {
+			$('.tran4').attr("src","images/ch_col_icn_h.png")
+			$('.tran4').next().css("color","white")
+		})
+		$('.tran4').mouseout(function() {
+			$('.tran4').attr("src","images/ch_col_icn.png")
+			$('.tran4').next().css("color","black")
+		})
+		$('.tran5').mouseover(function() {
+			$('.tran5').attr("src","images/ch_col_icn_h.png")
+			$('.tran5').next().css("color","white")
+		})
+		$('.tran5').mouseout(function() {
+			$('.tran5').attr("src","images/ch_col_icn.png")
+			$('.tran5').next().css("color","black")
+		})
+
+		$('.tuan1').mouseover(function() {
+			$('.tuan1').attr("src","images/iconbgh2.png")
+			$('.tuan1').next().css("color","white")
+		})
+		$('.tuan1').mouseout(function() {
+			$('.tuan1').attr("src","images/iconbg2.png")
+			$('.tuan1').next().css("color","black")
+		})
+		$('.tuan2').mouseover(function() {
+			$('.tuan2').attr("src","images/iconbgh2.png")
+			$('.tuan2').next().css("color","white")
+		})
+		$('.tuan2').mouseout(function() {
+			$('.tuan2').attr("src","images/iconbg2.png")
+			$('.tuan2').next().css("color","black")
+		})
+		$('.tuan3').mouseover(function() {
+			$('.tuan3').attr("src","images/iconbgh2.png")
+			$('.tuan3').next().css("color","white")
+		})
+		$('.tuan3').mouseout(function() {
+			$('.tuan3').attr("src","images/iconbg2.png")
+			$('.tuan3').next().css("color","black")
+		})
+		$('.tuan4').mouseover(function() {
+			$('.tuan4').attr("src","images/iconbgh2.png")
+			$('.tuan4').next().css("color","white")
+		})
+		$('.tuan4').mouseout(function() {
+			$('.tuan4').attr("src","images/iconbg2.png")
+			$('.tuan4').next().css("color","black")
+		})
+		$(document).ready(function() {
+		  var projects = $('.card');
+		  var filteredProjects = [];
+		  var selection = "all";
+		  var running = false;
+		  window.setTimeout(function() {
+		    $('.all').trigger('click');
+		  }, 150);
+
+		  $(window).resize(function() {
+		    buildGrid(filteredProjects);
+		  });
+
+		  $('.category-buttons a').on('click', function(e) {
+		    e.preventDefault();
+		    if (!running) {
+		      running = true;
+		      selection = $(this).data('group');
+		      $('.category-buttons a').removeClass('active');
+		      $(this).addClass('active');
+		      filteredProjects = [];
+		      for (i = 0; i < projects.length; i++) {
+		        var project = projects[i];
+		        var dataString = $(project).data('groups');
+		        var dataArray = dataString.split(',');
+		        dataArray.pop();
+		        if (selection === 'all') {
+		          $(project).addClass('setScale').queue(function(next) {
+		            filteredProjects.push(project);
+		            next();
+		          }).queue(function(next) {
+		            $(this).removeClass('setScale');
+		            next();
+		          }).queue(function(next) {
+		            $(this).addClass('animating show')
+		            next();
+		          }).delay(750).queue(function() {
+		            running = false;
+		            $(this).removeClass('animating').dequeue();
+		          });
+		        } else {
+		          if ($.inArray(selection, dataArray) > -1) {
+		            $(project).addClass('setScale').queue(function(next) {
+		              filteredProjects.push(project);
+		              next();
+		            }).queue(function(next) {
+		              $(this).removeClass('setScale');
+		              next();
+		            }).queue(function(next) {
+		              $(this).addClass('animating show')
+		              next();
+		            }).delay(750).queue(function() {
+		              running = false;
+		              $(this).removeClass('animating').dequeue();
+		            });
+		            /*$(project).css({
+		              '-webkit-transition': 'all 750ms cubic-bezier(0.175, 0.885, 0.32, 1.1)',
+		              'transition': 'all 750ms cubic-bezier(0.175, 0.885, 0.32, 1.1);',
+		              '-webkit-transform': 'scale(' + 1 + ')',
+		              '-ms-transform': 'scale(' + 1 + ')',
+		              'transform': 'scale(' + 1 + ')',
+		              'opacity': 1
+		            });*/
+		          } else {
+		            $(project).queue(function(next) {
+		              $(this).addClass('animating');
+		              next();
+		            }).queue(function(next) {
+		              $(this).removeClass('show');
+		              next();
+		            }).delay(750).queue(function() {
+		              $(this).removeClass('animating').dequeue();
+		            });
+
+		            /*$(project).css({
+		              '-webkit-transition': 'all 750ms cubic-bezier(0.175, 0.885, 0.32, 1.1)',
+		              'transition': 'all 750ms cubic-bezier(0.175, 0.885, 0.32, 1.1);',
+		              '-webkit-transform': 'scale(' + 0 + ')',
+		              '-webkit-transform': 'scale(' + 0 + ')',
+		              '-ms-transform': 'scale(' + 0 + ')',
+		              'transform': 'scale(' + 0 + ')',
+		              'opacity': 0
+		            });*/
+		          }
+		        }
+		      }
+		      buildGrid(filteredProjects);
+		    }
+		  })
+
+		  function buildGrid(projects) {
+		    var left = 0;
+		    var top = 0;
+		    var totalHeight = 0;
+		    var largest = 0;
+		    var heights = [];
+		    for (i = 0; i < projects.length; i++) {
+		      $(projects[i]).css({
+		        height: 'auto'
+		      });
+		      heights.push($(projects[i]).height());
+		    }
+		    var maxIndex = 0;
+		    var maxHeight = 0;
+
+		    for (i = 0; i <= heights.length; i++) {
+		      if (heights[i] > maxHeight) {
+		        maxHeight = heights[i];
+		        maxIndex = i;
+		        $('.guide').height(maxHeight);
+		      }
+		      if (i === heights.length) {
+		        for (i = 0; i < projects.length; i++) {
+		          $(projects[i]).css({
+		            position: 'absolute',
+		            left: left + '%',
+		            top: top
+		          });
+		          left = left + ($('.guide').width() / $('#grid').width() * 100) + 2;
+
+		          if (i === maxIndex) {
+		            $(projects[i]).css({
+		              height: 'auto'
+		            });
+		          } else {
+		            $(projects[i]).css({
+		              height: maxHeight
+		            });
+		          }
+		          if ((i + 1) % 3 === 0 && projects.length > 3 && $(window).width() >= 700) {
+		            top = top + $('.guide').height() + 20;
+		            left = 0;
+		            totalHeight = totalHeight + $('.guide').height() + 20;
+
+		          } else if ((i + 1) % 2 === 0 && projects.length > 2 && $(window).width() < 700 && $(window).width() >= 480) {
+		            top = top + $('.guide').height() + 20;
+		            left = 0;
+		            totalHeight = totalHeight + $('.guide').height() + 20;
+
+		          } else if ((i + 1) % 1 === 0 && projects.length > 1 && $(window).width() < 480) {
+		            top = top + $('.guide').height() + 20;
+		            left = 0;
+		            totalHeight = totalHeight + $('.guide').height() + 20;
+		          }
+		          $('#grid').height(totalHeight + $('.guide').height());
+		        }
+		      }
+		    }
+		  }
+		})
+	</script>
+</body>
+</html>
