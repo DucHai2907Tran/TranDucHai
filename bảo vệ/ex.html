@@ -103,7 +103,7 @@
 		  transform: scale(1);
 		  opacity: 1;
 		}
-		.work .card {
+		.work .card1 {
 		  background: #fff;
 		  display: block;
 		  text-decoration: none;
@@ -122,20 +122,20 @@
 		  opacity: 0;
 		}
 		@media (max-width: 700px) {
-		  .work .card {
+		  .work .card1 {
 		    width: 49.25%;
 		  }
 		}
 		@media (max-width: 480px) {
-		  .work .card {
+		  .work .card1 {
 		    width: 100%;
 		  }
 		}
-		.work .card img {
+		.work .card1 img {
 		  display: block;
 		  width: 100%;
 		}
-		.work .card .title {
+		.work .card1 .title {
 		  padding: 10px;
 		  color: #2b2b2b;
 		}
@@ -439,16 +439,103 @@
 			height: 1500px;
 			width: 100%;
 		}
+		.bg6{
+			height: 200px;
+			width: 100%;
+			background: black;
+			color: white;
+		}
+		@media screen and (min-width: 501px) and (max-width: 750px){
+			*{
+				font-size: 24px !important;
+			}
+			.nutmenu{
+				display: block !important;
+			}
+			.nutmenu2{
+				display: none;
+			}
+			.couterbg{
+				background: url(images/counterbg.jpg);
+				height: 800px;
+				width: 100%;
+				background-size: 100% 100%;
+			}
+			#mo2{
+				width: 100%;
+				height: 800px;
+				background: #00000099;
+			}
+			.bg{
+				margin-top: 10%;
+				background: url(images/testbg.jpg);
+				height: 800px;
+				width: 100%;
+				background-size: 100% 100%;
+			}
+			#mo3{
+				width: 100%;
+				height: 800px;
+				background: #00000099;
+			}
+			.bg2{
+				height: 600px;
+				width: 100%;
+				text-align: center !important;
+			}
+		}
+		@media screen and (max-width: 500px) {
+			*{
+				font-size: 12px !important;
+			}
+			.nutmenu{
+				display: block !important;
+			}
+			.nutmenu2{
+				display: none;
+			}
+			.couterbg{
+				background: url(images/counterbg.jpg);
+				height: 900px;
+				width: 100%;
+				background-size: 100% 100%;
+				font-size: 50px;
+			}
+			#mo2{
+				width: 100%;
+				height: 900px;
+				background: #00000099;
+			}
+			.bg{
+				margin-top: 10%;
+				background: url(images/testbg.jpg);
+				height: 900px;
+				width: 100%;
+				background-size: 100% 100%;
+				font-size: 50px;
+			}
+			#mo3{
+				width: 100%;
+				height: 900px;
+				background: #00000099;
+			}
+			.bg2{
+				height: 600px;
+				width: 100%;
+				text-align: center !important;
+			}
+		}
+
 	</style>
 </head>
 <body>
 	<div class="container-fluid header">
 		<div id="mo" class="container-fluid">
 			<div class="row mar">
-				<div class="col-xl-7 menu">
+				<div class="col-xl-7 col-md-11 col-sm-10 menu">
 					<img src="images/logo.png" alt="">
 				</div>
-				<div class="col-xl-5 menu">
+				<div class="col-xl-5 col-md-7 menu nutmenu2">
 					<nav class="nav nav-pills flex-column flex-sm-row" style="color: white">
 					  <a class="flex-sm-fill text-sm-center nav-link" href="#" style="color: white"><b>HOME</b></a>
 					  <a class="flex-sm-fill text-sm-center nav-link" href="#" style="color: white"><b>SERVICE</b></a>
@@ -458,6 +545,9 @@
 					  <a class="flex-sm-fill text-sm-center nav-link" href="#" style="color: white"><b>CONTACT</b></a>
 					  <a class="flex-sm-fill text-sm-center nav-link" href="#" style="color: white"><b><i class="fa fa-search" aria-hidden="true"></i></a></b>
 					</nav>
+				</div>
+				<div class="nutmenu col-md-1 col-sm-2" style="font-size: 150%; display: none;">
+					<button style=" background: black !important;"><i class="fa fa-bars" aria-hidden="true" style="color: white;"></i></button>
 				</div>
 				<div class="col-xl-12 text-center" style="color: white">
 					<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -569,7 +659,7 @@
 				<div class="tab-content">
 		  			<div class="tab-pane fade show active" id="web">
 		  				<div class="row" id="rowtab">
-		  					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+		  					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
 		  						<h5 class="tieudecon">WEB DESIGN ONE</h5>
 		  						<div class="progress" id="thanhtieude">
 		  							<div class="progress-bar" role="progressbar" style="width: 30%"></div>
@@ -577,14 +667,14 @@
 								<p>Suscipit voluptates, magnam doloremque facere hic? Vitae accusamus, dicta possimus maxime aperiam saepe porro, quas repudiandae! Vel repellat unde ullam vitae at voluptas hic, architecto aut quaerat esse voluptatibus incidunt in, Dolore mollitia molestias laborum voluptatem, eum aliquid, at consectetur ipsa numquam obcaecati quia nisi accusamus! ipsum dolor sit amet.</p>
 								<button type="button" class="nutbam">LEARN MORE</button>
 		  					</div>
-		  					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+		  					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
 		  						<img src="images/stab1.png" alt="">
 		  					</div>
 		  				</div>
 		  			</div>
 		  			<div class="tab-pane fade" id="app">
 		  				<div class="row" id="rowtab">
-		  					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+		  					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
 		  						<h5 class="tieudecon">WEB DESIGN TWO</h5>
 		  						<div class="progress" id="thanhtieude">
 		  							<div class="progress-bar" role="progressbar" style="width: 30%"></div>
@@ -592,14 +682,14 @@
 								<p>Suscipit voluptates, magnam doloremque facere hic? Vitae accusamus, dicta possimus maxime aperiam saepe porro, quas repudiandae! Vel repellat unde ullam vitae at voluptas hic, architecto aut quaerat esse voluptatibus incidunt in, Dolore mollitia molestias laborum voluptatem, eum aliquid, at consectetur ipsa numquam obcaecati quia nisi accusamus! ipsum dolor sit amet.</p>
 								<button type="button" class="nutbam">LEARN MORE</button>
 		  					</div>
-		  					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+		  					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
 		  						<img src="images/pf1.jpg" alt="">
 		  					</div>
 		  				</div>
 		  			</div>
 		  			<div class="tab-pane fade" id="graphic">
 		  				<div class="row" id="rowtab">
-		  					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+		  					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
 		  						<h5 class="tieudecon">WEB DESIGN THREE</h5>
 		  						<div class="progress" id="thanhtieude">
 		  							<div class="progress-bar" role="progressbar" style="width: 30%"></div>
@@ -607,14 +697,14 @@
 								<p>Suscipit voluptates, magnam doloremque facere hic? Vitae accusamus, dicta possimus maxime aperiam saepe porro, quas repudiandae! Vel repellat unde ullam vitae at voluptas hic, architecto aut quaerat esse voluptatibus incidunt in, Dolore mollitia molestias laborum voluptatem, eum aliquid, at consectetur ipsa numquam obcaecati quia nisi accusamus! ipsum dolor sit amet.</p>
 								<button type="button" class="nutbam">LEARN MORE</button>
 		  					</div>
-		  					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+		  					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
 		  						<img src="images/pf6.jpg" alt="">
 		  					</div>
 		  				</div>
 		  			</div>
 		  			<div class="tab-pane fade" id="game">
 		  				<div class="row" id="rowtab">
-		  					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+		  					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
 		  						<h5 class="tieudecon">WEB DESIGN FOUR</h5>
 		  						<div class="progress" id="thanhtieude">
 		  							<div class="progress-bar" role="progressbar" style="width: 30%"></div>
@@ -622,7 +712,7 @@
 								<p>Suscipit voluptates, magnam doloremque facere hic? Vitae accusamus, dicta possimus maxime aperiam saepe porro, quas repudiandae! Vel repellat unde ullam vitae at voluptas hic, architecto aut quaerat esse voluptatibus incidunt in, Dolore mollitia molestias laborum voluptatem, eum aliquid, at consectetur ipsa numquam obcaecati quia nisi accusamus! ipsum dolor sit amet.</p>
 								<button type="button" class="nutbam">LEARN MORE</button>
 		  					</div>
-		  					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+		  					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
 		  						<img src="images/pf1.jpg" alt="">
 		  					</div>
 		  				</div>
@@ -631,7 +721,7 @@
 			</div>
 		</div>
 		<div class="row mar" style="margin-top: 10%;">
-			<div class="col-xl-6">
+			<div class="col-xl-6 col-md-12 col-sm-12">
 				<h5 class="tieudecon">
 					FEATUAR DESIGN
 				</h5>
@@ -662,7 +752,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-xl-6" style="margin-top: 9%; color: #3d373761;">
+			<div class="col-xl-6 col-md-12 col-sm-12" style="margin-top: 9%; color: #3d373761;">
 				<b>HAND WITH A WATCH</b>
 				<p style="margin-top: 10%;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quae ad, eius, nam sunt alias. Iusto assumenda voluptatum illo quos itaque aspernatur nemo est voluptatibus dolore qui, repudiandae iste unde.</p>
 				<p><b>Client:</b> Dadit Lorm</p>
@@ -674,7 +764,7 @@
 			</div>
 		</div>
 		<div class="row container-fluid" style="padding-top: 5%; margin: 0;">
-			<div class="col-xl-12 videobg text-center" style="color: white">
+			<div class="col-xl-12 col-md-12 col-sm-12 videobg text-center" style="color: white">
 				<div id="mo1">
 					<i class="fa fa-play-circle-o" aria-hidden="true" style="font-size: 1000%; margin-top: 12%;"></i>
 					<p style="font-size: 150%;"><b>WATCH OUR INTRO</b></p>
@@ -682,7 +772,7 @@
 			</div>
 		</div>
 		<div class="row mar container-fluid" style="padding-top: 5%;">
-			<div class="col-xl-6">
+			<div class="col-xl-6 col-md-12 col-sm-12">
 				<h5 class="tieudecon">
 					ABOUT LOGIC
 				</h5>
@@ -691,42 +781,42 @@
 				</div>
 				<div class="col-xl-12">
 					<div class="row">
-						<div class="col-xl-3 hai" style="padding-top: 16%;">
+						<div class="col-xl-3 col-md-2 col-sm-12 hai" style="padding-top: 16%;">
 							<img src="images/iconbg1.png" alt="" style="position: relative;" class="hai2">
 							<i class="fa fa-coffee size" aria-hidden="true" style="padding-top: 5%; position: absolute; left: 18px; right: 0"></i>
 						</div>
-						<div class="col-xl-9" style="margin-top: 14%; color: #3d373761;">
+						<div class="col-xl-9 col-md-10 col-sm-12" style="margin-top: 14%; color: #3d373761;">
 							<p style="font-size: 150%;"><b>RESPONSIVE DESIGN</b></p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, libero!</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, libero!</p>
 						</div>
-						<div class="col-xl-3 hai1" style="padding-top: 10%;">
+						<div class="col-xl-3 col-md-2 col-sm-12 hai1" style="padding-top: 10%;">
 							<img src="images/iconbg1.png" alt="" style="position: relative;" class="hai22">
-							<i class="fa fa-coffee size" aria-hidden="true" style="padding-top: 5%; position: absolute; left: 18px; right: 0"></i>
+							<i class="fa fa-globe size" aria-hidden="true" style="padding-top: 5%; position: absolute; left: 18px; right: 0"></i>
 						</div>
-						<div class="col-xl-9" style="margin-top: 8%; color: #3d373761;">
-							<p style="font-size: 150%;"><b>RESPONSIVE DESIGN</b></p>
+						<div class="col-xl-9 col-md-10 col-sm-12" style="margin-top: 8%; color: #3d373761;">
+							<p style="font-size: 150%;"><b>EASY TO CUSTOMIZE</b></p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, libero!</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, libero!</p>
 						</div>
-						<div class="col-xl-3 hai11" style="padding-top: 10%;">
+						<div class="col-xl-3 col-md-2 col-sm-12 hai11" style="padding-top: 10%;">
 							<img src="images/iconbg1.png" alt="" style="position: relative;" class="hai222">
-							<i class="fa fa-coffee size" aria-hidden="true" style="padding-top: 5%; position: absolute; left: 18px; right: 0"></i>
+							<i class="fa fa-heartbeat size" aria-hidden="true" style="padding-top: 5%; position: absolute; left: 18px; right: 0"></i>
 						</div>
-						<div class="col-xl-9" style="margin-top: 8%; color: #3d373761;">
-							<p style="font-size: 150%;"><b>RESPONSIVE DESIGN</b></p>
+						<div class="col-xl-9 col-md-10 col-sm-12" style="margin-top: 8%; color: #3d373761;">
+							<p style="font-size: 150%;"><b>LIFE TIME SUPPORT</b></p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, libero!</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, libero!</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-xl-6 abright">
+			<div class="col-xl-6 col-md-12 abright">
 				<img src="images/abright.png" alt="" style="margin-left: 15%; height: 750px;">
 			</div>
 		</div>
 		<div class="row container-fluid mar" style="margin-top: 10%;">
-			<div class="col-xl-6">
+			<div class="col-xl-6 col-md-12 col-sm-12">
 				<div class="container">
 					<ul class="row nav nav-pills" style="list-style: none;">
 						<li class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-6 nav-item">
@@ -770,31 +860,31 @@
 					</div>
 				</div>
 				<div class="row" style="padding-top: 4%; color: #3d373761;">
-					<div class="col-xl-6">
+					<div class="col-xl-6 col-md-6 col-sm 12">
 						<i class="fa fa-check-square" aria-hidden="true"></i> We just want to love our client
 					</div>
-					<div class="col-xl-6">
+					<div class="col-xl-6 col-md-6 col-sm-12">
 						<i class="fa fa-check-square" aria-hidden="true"></i> We just want to love our client
 					</div>
 				</div>
 				<div class="row" style="padding-top: 1%; color: #3d373761;">
-					<div class="col-xl-6">
+					<div class="col-xl-6 col-md-6 col-sm-12">
 						<i class="fa fa-check-square" aria-hidden="true"></i> We just want to love our client
 					</div>
-					<div class="col-xl-6">
+					<div class="col-xl-6 col-md-6 col-sm-12">
 						<i class="fa fa-check-square" aria-hidden="true"></i> We just want to love our client
 					</div>
 				</div>
 			</div>
 			<div class="col-xl-6 container-fluid">
 				<div class="row container-fluid" style="margin-left: 0 !important; margin-right: 0 !important;">
-					<div class="col-xl-10">
+					<div class="col-xl-10 col-md-9 col-sm-9">
 						<p style="margin-left: 5%; font-size: 200%;">PHOTOSHOP</p>
 					</div>
-					<div class="col-xl-2">
+					<div class="col-xl-2 col-md-3 col-sm-3">
 						<p style="font-size: 200%">79%</p>
 					</div>
-					<div class="col-xl-12">
+					<div class="col-xl-12 col-md-12 col-sm-12">
 						<div class="progress" style="margin-left: 5%; height: 0.5rem">
 							 <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
 							 aria-valuemin="0" aria-valuemax="100" style="width:79%; background-color: orange">
@@ -803,13 +893,13 @@
 					</div>
 				</div>
 				<div class="row container-fluid" style="margin-left: 0 !important;margin-top: 5%; margin-right: 0 !important;">
-					<div class="col-xl-10">
+					<div class="col-xl-10 col-md-9 col-sm-9">
 						<p style="margin-left: 5%; font-size: 200%;">HTML/CSS</p>
 					</div>
-					<div class="col-xl-2">
+					<div class="col-xl-2 col-md-3 col-sm-3">
 						<p style="font-size: 200%">90%</p>
 					</div>
-					<div class="col-xl-12">
+					<div class="col-xl-12 col-md-12 col-sm-12">
 						<div class="progress" style="margin-left: 5%; height: 0.5rem">
 							 <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
 							 aria-valuemin="0" aria-valuemax="100" style="width:90%; background-color: orange">
@@ -818,13 +908,13 @@
 					</div>
 				</div>
 				<div class="row container-fluid" style="margin-left: 0 !important;margin-top: 5%; margin-right: 0 !important;">
-					<div class="col-xl-10">
+					<div class="col-xl-10 col-md-9 col-sm-9">
 						<p style="margin-left: 5%; font-size: 200%;">JAVASCRIPT</p>
 					</div>
-					<div class="col-xl-2">
+					<div class="col-xl-2 col-md-3 col-sm-3">
 						<p style="font-size: 200%">69%</p>
 					</div>
-					<div class="col-xl-12">
+					<div class="col-xl-12 col-md-12 col-sm-12">
 						<div class="progress" style="margin-left: 5%; height: 0.5rem">
 							 <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
 							 aria-valuemin="0" aria-valuemax="100" style="width:69%; background-color: orange">
@@ -833,13 +923,13 @@
 					</div>
 				</div>
 				<div class="row container-fluid" style="margin-left: 0 !important;margin-top: 5%; margin-right: 0 !important;">
-					<div class="col-xl-10">
+					<div class="col-xl-10 col-md-9 col-sm-9">
 						<p style="margin-left: 5%; font-size: 200%;">WORDPRESS</p>
 					</div>
-					<div class="col-xl-2">
+					<div class="col-xl-2 col-md-3 col-sm-3">
 						<p style="font-size: 200%">92%</p>
 					</div>
-					<div class="col-xl-12">
+					<div class="col-xl-12 col-md-12 col-sm-12">
 						<div class="progress" style="margin-left: 5%; height: 0.5rem">
 							 <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
 							 aria-valuemin="0" aria-valuemax="100" style="width:92%; background-color: orange">
@@ -853,32 +943,32 @@
 			<div id="mo2">
 				<div class="col-xl-12 mar">
 					<div class="row text-center" style="padding-top: 8%;">
-						<div class="col-xl-3">
+						<div class="col-xl-3 col-md-6 col-sm-12">
 							<p><b style="font-size: 300%;"><span class="counter">561</span></b></p>
-							<p><i class="fa fa-thumbs-o-up" aria-hidden="true" style="font-size: 300%; color: orange;"></i></p>
+							<p><i class="fa fa-thumbs-o-up" aria-hidden="true" style="font-size: 200%; color: orange;"></i></p>
 							<p>CREATIVE DESIGN</p>
 						</div>
-						<div class="col-xl-3">
-							<p><b style="font-size: 300%;"><span class="counter">561</span></b></p>
-							<p><i class="fa fa-star" aria-hidden="true" style="font-size: 300%; color: orange;"></i></p>
-							<p>CREATIVE DESIGN</p>
+						<div class="col-xl-3 col-md-6 col-sm-12">
+							<p><b style="font-size: 300%;"><span class="counter">1561</span></b></p>
+							<p><i class="fa fa-star" aria-hidden="true" style="font-size: 200%; color: orange;"></i></p>
+							<p>AWARDS WON</p>
 						</div>
-						<div class="col-xl-3">
-							<p><b style="font-size: 300%;"><span class="counter">561</span></b></p>
-							<p><i class="fa fa-thumbs-o-up" aria-hidden="true" style="font-size: 300%; color: orange;"></i></p>
-							<p>CREATIVE DESIGN</p>
+						<div class="col-xl-3 col-md-6 col-sm-12">
+							<p><b style="font-size: 300%;"><span class="counter">3561</span></b></p>
+							<p><i class="fa fa-futbol-o" aria-hidden="true" style="font-size: 200%; color: orange;"></i></p>
+							<p>HAPPY CLIENTS</p>
 						</div>
-						<div class="col-xl-3">
-							<p><b style="font-size: 300%;"><span class="counter">561</span></b></p>
-							<p><i class="fa fa-thumbs-o-up" aria-hidden="true" style="font-size: 300%; color: orange;"></i></p>
-							<p>CREATIVE DESIGN</p>
+						<div class="col-xl-3 col-md-6 col-sm-12">
+							<p><b style="font-size: 300%;"><span class="counter">4561</span></b></p>
+							<p><i class="fa fa-headphones" aria-hidden="true" style="font-size: 200%; color: orange;"></i></p>
+							<p>CUP OF CAFFE</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="row container-fluid mar" style="padding-top: 5%">
-			<div class="col-xl-12">
+			<div class="col-xl-12 col-md-12">
 				<div>
 					<b class="sizeds1">THER SERVICES</b>
 				</div>
@@ -889,86 +979,86 @@
 				</div>
 			</div>
 			<div class="row container-fluid" style="padding-top: 10%;">
-				<div class="col-xl-4" style="flex: 0 0 31%; margin-left: 2%;">
+				<div class="col-xl-4 col-md-12 col-sm-12" style="flex: 0 0 31%; margin-left: 2%;">
 					<div class="row">
-						<div class="col-xl-2">
+						<div class="col-xl-2 col-md-2 col-sm-2">
 							<img src="images/info_iconbg.png" alt="" style="position: relative;" class="duc1">
-							<i class="fa fa-clock-o duc1" aria-hidden="true" style="position: absolute; left: 0 ; font-size: 200%; padding-top: 14%;"></i>
+							<i class="fa fa-clock-o duc1" aria-hidden="true" style="position: absolute; left: 2% ; font-size: 200%; padding-top: 14%;"></i>
 						</div>
-						<div class="col-xl-10">
+						<div class="col-xl-10 col-md-10 col-sm-10">
 							<p style="padding-top: 5%; font-size: 150%; color: #3d373761;">CREATIVE DESIGN</p>
 						</div>
-						<div class="col-xl-12" style="padding-top: 2%; color: #3d373761">
+						<div class="col-xl-12 col-md-12 col-sm-12" style="padding-top: 2%; color: #3d373761">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, ratione.</p>
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-4" style="flex: 0 0 31%; margin-left: 2%;">
+				<div class="col-xl-4 col-md-12 col-sm-12" style="flex: 0 0 31%; margin-left: 2%;">
 					<div class="row">
-						<div class="col-xl-2">
+						<div class="col-xl-2 col-md-2 col-sm-2">
 							<img src="images/info_iconbg.png" alt="" style="position: relative;" class="duc2">
-							<i class="fa fa-clock-o duc2" aria-hidden="true" style="position: absolute; left: 0 ; font-size: 200%; padding-top: 14%;"></i>
+							<i class="fa fa-meetup duc2" aria-hidden="true" style="position: absolute; left: 2% ; font-size: 200%; padding-top: 14%;"></i>
 						</div>
-						<div class="col-xl-10">
-							<p style="padding-top: 5%; font-size: 150%; color: #3d373761;">CREATIVE DESIGN</p>
+						<div class="col-xl-10 col-md-10 col-sm-10">
+							<p style="padding-top: 5%; font-size: 150%; color: #3d373761;">WED DEVELOPMENT</p>
 						</div>
-						<div class="col-xl-12" style="padding-top: 2%; color: #3d373761">
+						<div class="col-xl-12 col-md-12 col-sm-12" style="padding-top: 2%; color: #3d373761">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, ratione.</p>
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-4" style="flex: 0 0 31%; margin-left: 2%;">
+				<div class="col-xl-4 col-md-12 col-sm-12" style="flex: 0 0 31%; margin-left: 2%;">
 					<div class="row">
-						<div class="col-xl-2">
+						<div class="col-xl-2 col-md-2 col-sm-2">
 							<img src="images/info_iconbg.png" alt="" style="position: relative;" class="duc3">
-							<i class="fa fa-clock-o duc3" aria-hidden="true" style="position: absolute; left: 0 ; font-size: 200%; padding-top: 14%;"></i>
+							<i class="fa fa-grav duc3" aria-hidden="true" style="position: absolute; left: 2% ; font-size: 200%; padding-top: 14%;"></i>
 						</div>
-						<div class="col-xl-10">
-							<p style="padding-top: 5%; font-size: 150%; color: #3d373761;">CREATIVE DESIGN</p>
+						<div class="col-xl-10 col-md-10 col-sm-10">
+							<p style="padding-top: 5%; font-size: 150%; color: #3d373761;">VIDEO EDTING</p>
 						</div>
-						<div class="col-xl-12" style="padding-top: 2%; color: #3d373761">
+						<div class="col-xl-12 col-md-12 col-sm-12" style="padding-top: 2%; color: #3d373761">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, ratione.</p>
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-4" style="flex: 0 0 31%; margin-left: 2%;">
+				<div class="col-xl-4 col-md-12 col-sm-12" style="flex: 0 0 31%; margin-left: 2%;">
 					<div class="row">
-						<div class="col-xl-2">
+						<div class="col-xl-2 col-md-2 col-sm-2">
 							<img src="images/info_iconbg.png" alt="" style="position: relative;" class="duc4">
-							<i class="fa fa-clock-o duc4" aria-hidden="true" style="position: absolute; left: 0 ; font-size: 200%; padding-top: 14%;"></i>
+							<i class="fa fa-ravelry duc4" aria-hidden="true" style="position: absolute; left: 2% ; font-size: 200%; padding-top: 14%;"></i>
 						</div>
-						<div class="col-xl-10">
-							<p style="padding-top: 5%; font-size: 150%; color: #3d373761;">CREATIVE DESIGN</p>
+						<div class="col-xl-10 col-md-10 col-sm-10">
+							<p style="padding-top: 5%; font-size: 150%; color: #3d373761;">MARKETINC</p>
 						</div>
-						<div class="col-xl-12" style="padding-top: 2%; color: #3d373761">
+						<div class="col-xl-12 col-md-12 col-sm-12" style="padding-top: 2%; color: #3d373761">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, ratione.</p>
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-4" style="flex: 0 0 31%; margin-left: 2%;">
+				<div class="col-xl-4 col-md-12 col-sm-12" style="flex: 0 0 31%; margin-left: 2%;">
 					<div class="row">
-						<div class="col-xl-2">
+						<div class="col-xl-2 col-md-2 col-sm-2">
 							<img src="images/info_iconbg.png" alt="" style="position: relative;" class="duc5">
-							<i class="fa fa-clock-o duc5" aria-hidden="true" style="position: absolute; left: 0 ; font-size: 200%; padding-top: 14%;"></i>
+							<i class="fa fa-address-card-o duc5" aria-hidden="true" style="position: absolute; left: 2% ; font-size: 200%; padding-top: 14%;"></i>
 						</div>
-						<div class="col-xl-10">
-							<p style="padding-top: 5%; font-size: 150%; color: #3d373761;">CREATIVE DESIGN</p>
+						<div class="col-xl-10 col-md-10 col-sm-10">
+							<p style="padding-top: 5%; font-size: 150%; color: #3d373761;">PHOTOGRAPHY</p>
 						</div>
-						<div class="col-xl-12" style="padding-top: 2%; color: #3d373761">
+						<div class="col-xl-12 col-md-12 col-sm-12" style="padding-top: 2%; color: #3d373761">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, ratione.</p>
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-4" style="flex: 0 0 31%; margin-left: 2%;">
+				<div class="col-xl-4 col-md-12 col-sm-12" style="flex: 0 0 31%; margin-left: 2%;">
 					<div class="row">
-						<div class="col-xl-2">
+						<div class="col-xl-2 col-md-2 col-sm-2">
 							<img src="images/info_iconbg.png" alt="" style="position: relative;" class="duc6">
-							<i class="fa fa-clock-o duc6" aria-hidden="true" style="position: absolute; left: 0 ; font-size: 200%; padding-top: 14%;"></i>
+							<i class="fa fa-american-sign-language-interpreting duc6" aria-hidden="true" style="position: absolute; left: 2% ; font-size: 200%; padding-top: 14%;"></i>
 						</div>
-						<div class="col-xl-10">
-							<p style="padding-top: 5%; font-size: 150%; color: #3d373761;">CREATIVE DESIGN</p>
+						<div class="col-xl-10 col-md-10 col-sm-10">
+							<p style="padding-top: 5%; font-size: 150%; color: #3d373761;">LOGO DESIGN</p>
 						</div>
-						<div class="col-xl-12" style="padding-top: 2%; color: #3d373761">
+						<div class="col-xl-12 col-md-12 col-sm-12" style="padding-top: 2%; color: #3d373761">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, ratione.</p>
 						</div>
 					</div>
@@ -976,7 +1066,7 @@
 			</div>
 		</div>
 		<div class="row container-fluid mar" style="padding-top: 10%;">
-			<div class="col-xl-12">
+			<div class="col-xl-12 col-md-12 col-sm-12">
 				<div>
 					<b class="sizeds1">THER SERVICES</b>
 				</div>
@@ -987,25 +1077,37 @@
 				</div>
 			</div>
 			<div class="row container-fluid mar" style="margin-top: 10%; flex: 0 0 100%">
-				<div class="col-xl-3">		
-					<img src="images/team1.jpg" alt="" style="margin-left: 1%;">
+				<div class="col-xl-3 col-md-12 col-sm-12 hoveranh">		
+					<img src="images/team1.jpg" alt="" style="margin-left: 1%; position: relative; ">
+					<div style="position: absolute; height: 200px; width: 80%; background: orange; top: 10%; left: 5%; color: white; display: none" class="text-center">
+						<i class="fa fa-paper-plane" aria-hidden="true" type="button" style="padding-top: 35%;"></i>
+					</div>
 				</div>
-				<div class="col-xl-3">		
+				<div class="col-xl-3 col-md-12 col-sm-12 hoveranh">		
 					<img src="images/team2.jpg" alt="" style="margin-left: 1%;">
+					<div style="position: absolute; height: 200px; width: 80%; background: orange; top: 10%; left: 5%; color: white; display: none" class="text-center">
+						<i class="fa fa-paper-plane" aria-hidden="true" type="button" style="padding-top: 35%;"></i>
+					</div>
 				</div>
-				<div class="col-xl-3">		
+				<div class="col-xl-3 col-md-12 col-sm-12 hoveranh">		
 					<img src="images/team3.jpg" alt="" style="margin-left: 1%;">
+					<div style="position: absolute; height: 200px; width: 80%; background: orange; top: 10%; left: 5%; color: white; display: none" class="text-center">
+						<i class="fa fa-paper-plane" aria-hidden="true" type="button" style="padding-top: 35%;"></i>
+					</div>
 				</div>
-				<div class="col-xl-3">		
+				<div class="col-xl-3 col-md-12 col-sm-12 hoveranh">		
 					<img src="images/team4.jpg" alt="" style="margin-left: 1%;">
+					<div style="position: absolute; height: 200px; width: 80%; background: orange; top: 10%; left: 5%; color: white; display: none" class="text-center">
+						<i class="fa fa-paper-plane" aria-hidden="true" type="button" style="padding-top: 35%;"></i>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="row container-fluid mar" style="padding-top: 10%;">
-			<div class="col-xl-6">
-				<div class="col-xl-12">
+			<div class="col-xl-6 col-md-12 col-sm-12">
+				<div class="col-xl-12 col-md-12 col-sm-12">
 					<div>
-						<b class="sizeds1">THER SERVICES</b>
+						<b class="sizeds1">WHY CHOSE US</b>
 					</div>
 					<div class="progress" style="height: 0.2rem; width: 10%; margin-top: 2%;">
 						 <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
@@ -1014,14 +1116,14 @@
 					</div>
 				</div>
 				<div class="row container-fluid">
-					<div class="col-xl-12 container-fluid" style="margin-top: 15%;">
+					<div class="col-xl-12 col-md-12 col-sm-12 container-fluid" style="margin-top: 15%;">
 						<div class="row">
 							<div id="accordion" style="width: 600px; margin-left: 5%;">
 							  <div class="card col-xl-12">
 							    <div class="card-header"  style="background: white">
 							      <a class="card-link" data-toggle="collapse" href="#collapseOne" style="color: black">
 							        <img src="images/ch_col_icn.png" alt="" style="position: relative;" class="tran1">
-							        <i class="fa fa-picture-o tran1" aria-hidden="true" style="position: absolute; left: 2%; padding-top: 2%; font-size: 150%; color: black"></i>
+							        <i class="fa fa-picture-o tran1" aria-hidden="true" style="position: absolute; left: 2%; padding-top: 2%; font-size: 150%; color: black;"></i>
 							       	CREATIVE DESIGN
 							      </a>
 							    </div>
@@ -1035,7 +1137,7 @@
 							    <div class="card-header" style="background: white">
 							      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo" style="color: black">
 							        <img src="images/ch_col_icn.png" alt="" style="position: relative;" class="tran2">
-							        <i class="fa fa-picture-o tran2" aria-hidden="true" style="position: absolute; left: 2%; padding-top: 2%; font-size: 150%; color: black"></i>
+							        <i class="fa fa-paint-brush tran2" aria-hidden="true" style="position: absolute; left: 2%; padding-top: 2%; font-size: 150%; color: black"></i>
 							       	REPONSIVE DESIGN
 							      </a>
 							    </div>
@@ -1050,7 +1152,7 @@
 							    <div class="card-header" style="background: white">
 							      <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree" style="color: black">
 							        <img src="images/ch_col_icn.png" alt="" style="position: relative;" class="tran3">
-							        <i class="fa fa-picture-o tran3" aria-hidden="true" style="position: absolute; left: 2%; padding-top: 2%; font-size: 150%; color: black"></i>
+							        <i class="fa fa-plane tran3" aria-hidden="true" style="position: absolute; left: 2%; padding-top: 2%; font-size: 150%; color: black"></i>
 							       	RETINA READY
 							      </a>
 							    </div>
@@ -1065,7 +1167,7 @@
 							    <div class="card-header" style="background: white">
 							      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour" style="color: black">
 							        <img src="images/ch_col_icn.png" alt="" style="position: relative;" class="tran4">
-							        <i class="fa fa-picture-o tran4" aria-hidden="true" style="position: absolute; left: 2%; padding-top: 2%; font-size: 150%; color: black"></i>
+							        <i class="fa fa-puzzle-piece tran4" aria-hidden="true" style="position: absolute; left: 2%; padding-top: 2%; font-size: 150%; color: black"></i>
 							       	FREE GOOGLE FONT
 							      </a>
 							    </div>
@@ -1080,7 +1182,7 @@
 							    <div class="card-header" style="background: white">
 							      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFive" style="color: black">
 							        <img src="images/ch_col_icn.png" alt="" style="position: relative;" class="tran5">
-							        <i class="fa fa-picture-o tran5" aria-hidden="true" style="position: absolute; left: 2%; padding-top: 2%; font-size: 150%; color: black"></i>
+							        <i class="fa fa-recycle tran5" aria-hidden="true" style="position: absolute; left: 2%; padding-top: 2%; font-size: 150%; color: black"></i>
 							       	1170 PX GRID BASE
 							      </a>
 							    </div>
@@ -1096,60 +1198,76 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-xl-6">
+			<div class="col-xl-6 col-md-12 col-sm-12">
 				<img src="images/choose.png" alt="" style=" width: 100%; ">
 			</div>
 		</div>
-		<!--ĐÂY A ƠI->
-					<--...-->
 		<div class="locanh" style="margin-top: 5%">
-			<div class="work">
-			  <div class="category-buttons">
-			    <a href="#" class="active all" data-group="all">All</a>
-			    <a href="#" data-group="city">city</a>
-			    <a href="#" data-group="nature">nature</a>
-			    <a href="#" data-group="food">food</a>
-			  </div>
-			  <div id="grid" class="grid">
-			    <a class="card" href="#" data-groups="city,">
-			      <img src="images/pf1.jpg" />
-			    </a>
-			    <a class="card" href="#" data-groups="nature,">
-			      <img src="images/pf2.jpg" />
-			    </a>
-			    <a class="card" href="#" data-groups="food,">
-			      <img src="images/pf3.jpg" />
-			    </a>
-			    <a class="card" href="#" data-groups="food,">
-			      <img src="images/pf1.jpg" />
-			    </a>
-			    <a class="card" href="#" data-groups="city,,">
-			      <img src="images/pf6.jpg" />
-			    </a>
-			    <a class="card" href="#" data-groups="nature,food,">
-			      <img src="images/pf7.jpg" />
-			    </a>
-			    <a class="card" href="#" data-groups="food,">
-			      <img src="images/pf8.jpg" />
-			    </a>
-			    <a class="card" href="#" data-groups="food,">
-			      <img src="images/pf2.jpg" />
-			    </a>
-			    <div class="guide"></div>
-			  </div>
+			<div class="mar">
+				<div class="row container-fluid">
+					<div class="col-xl-12">
+						<div>
+							<b class="sizeds1">THER PHOTOGRAPHY</b>
+						</div>
+						<div class="progress" style="height: 0.2rem; width: 30%; margin-top: 2%;">
+							 <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
+							 aria-valuemin="0" aria-valuemax="100" style="width:30%; background-color: orange">
+							 </div>
+						</div>
+					</div>
+				</div>
+				<div class="row container-fluid" style="padding-top: 5%;">
+					<div class="col-xl-12">
+						<div class="work">
+					  <div class="category-buttons">
+					    <a href="#" class="active all" data-group="all">SHOW All</a>
+					    <a href="#" data-group="city">PHOTOGRAPHY</a>
+					    <a href="#" data-group="nature">BRANDING</a>
+					    <a href="#" data-group="food">GRAPIHC DESIGN</a>
+					  </div>
+					  <div id="grid" class="grid">
+					    <a class="card1" href="#" data-groups="city,">
+					      <img src="images/pf3.jpg" />
+					    </a>
+					    <a class="card1" href="#" data-groups="nature,">
+					      <img src="images/pf2.jpg" />
+					    </a>
+					    <a class="card1" href="#" data-groups="food,">
+					      <img src="images/pf3.jpg" />
+					    </a>
+					    <a class="card1" href="#" data-groups="food,">
+					      <img src="images/pf2.jpg" />
+					    </a>
+					    <a class="card1" href="#" data-groups="city,,">
+					      <img src="images/pf8.jpg" />
+					    </a>
+					    <a class="card1" href="#" data-groups="nature,food,">
+					      <img src="images/pf7.jpg" />
+					    </a>
+					    <a class="card1" href="#" data-groups="food,">
+					      <img src="images/pf8.jpg" />
+					    </a>
+					    <a class="card1" href="#" data-groups="food,">
+					      <img src="images/pf2.jpg" />
+					    </a>
+					    <div class="guide"></div>
+					  </div>
+					</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="bg">
 			<div id="mo3">
 				<div class="row container-fluid mar">
-					<div class="col-xl-12 text-center" style="color: white;">
+					<div class="col-xl-12 col-md-12 col-sm-12 text-center" style="color: white;">
 						<i class="fa fa-quote-right" aria-hidden="true" style="font-size: 200%; padding-top: 5%;"></i>
-						<div class="col-xl-12 text-center" style="color: white">
+						<div class="col-xl-12 col-md-12 col-sm-12 text-center" style="color: white">
 							<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 								  <div class="carousel-inner">
 								    <div class="carousel-item active">
 								        <div class="row text-center">
-											<div class="text12" class="col-xl-12">
+											<div class="text12" class="col-xl-12 col-md-12 col-sm-12">
 												<br>
 												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis quia magnam amet voluptate ad error animi voluptatibus, repellat facere possimus natus, veniam recusandae quaerat quidem nemo, consectetur iusto assumenda velit. Laboriosam, eos delectus quis necessitatibus, ab, laborum rerum aperiam nostrum sequi doloribus voluptas iure. Fugit id inventore maxime doloribus excepturi.
 											</div>
@@ -1157,7 +1275,7 @@
 								    </div>
 								    <div class="carousel-item">
 								        <div class="row text-center">
-											<div class="text12" class="col-xl-12">
+											<div class="text12" class="col-xl-12 col-md-12 col-sm-12">
 												<br>
 												Start bootstrap can help you build strap 
 											</div>
@@ -1165,7 +1283,7 @@
 								    </div>
 								    <div class="carousel-item">
 								        <div class="row text-center">
-											<div class="text12" class="col-xl-12">
+											<div class="text12" class="col-xl-12 col-md-12 col-sm-12">
 												<br>
 												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quos harum error non, perspiciatis, fugit omnis, placeat debitis consectetur laboriosam reprehenderit minima quam ad nesciunt voluptatem. Voluptates aperiam dolores ipsam officiis a architecto enim laboriosam quam, impedit illum beatae perferendis pariatur excepturi culpa expedita magni similique assumenda explicabo veritatis porro ad. Deleniti debitis, possimus vero, voluptas id nam atque ex.
 											</div>
@@ -1173,7 +1291,7 @@
 								    </div>
 								  </div>
 							</div>
-							<div class="col-xl-12 text-center" style="color: white" class="carousel-indicators">
+							<div class="col-xl-12 col-md-12 col-sm-12 text-center" style="color: white" class="carousel-indicators">
 								<br><br><br>
 								<i class="fa fa-circle" aria-hidden="true" data-target="#carouselExampleIndicators" data-slide-to="6" class="active"></i>
 								<i class="fa fa-circle" aria-hidden="true" data-target="#carouselExampleIndicators" data-slide-to="7"></i>
@@ -1186,98 +1304,98 @@
 		</div>
 		<div class="bg2">
 			<div class="row mar container-fluid" style="padding-top: 4%;">
-				<div class="col-xl-2">
+				<div class="col-xl-2 col-md-12 col-sm-12">
 					<img src="images/clogo1.png" alt="">
 				</div>
-				<div class="col-xl-2">
+				<div class="col-xl-2 col-md-12 col-sm-12">
 					<img src="images/clogo2.png" alt="">
 				</div>
-				<div class="col-xl-2">
+				<div class="col-xl-2 col-md-12 col-sm-12">
 					<img src="images/clogo3.png" alt="">
 				</div>
-				<div class="col-xl-2">
+				<div class="col-xl-2 col-md-12 col-sm-12">
 					<img src="images/clogo4.png" alt="">
 				</div>
-				<div class="col-xl-2">
+				<div class="col-xl-2 col-md-12 col-sm-12">
 					<img src="images/clogo5.png" alt="">
 				</div>
-				<div class="col-xl-2">
+				<div class="col-xl-2 col-md-12 col-sm-12">
 					<img src="images/clogo9.png" alt="">
 				</div>
 			</div>
 		</div>
 		<div class="bg3">
 			<div class="row mar container-fluid" style="margin-top: 5%;">
-				<div class="col-xl-6">
+				<div class="col-xl-6 col-md-12 col-sm-12">
 					<h5 class="tieudecon">CONTACT INFO</h5>
 		  			<div class="progress" id="thanhtieude">
 		  				<div class="progress-bar" role="progressbar" style="width: 30%"></div>
 					</div>
-					<div class="row col-xl-12" style="padding-top: 20%;">
-						<div class="col-xl-2">
+					<div class="row col-xl-12 col-md-12 col-sm-12" style="padding-top: 20%;">
+						<div class="col-xl-2 col-md-2 col-sm-2">
 							<img class="tuan1" src="images/iconbg2.png" alt="" style="position: relative;">
 							<i class="fa fa-envelope tuan1" aria-hidden="true" style="position: absolute; left: 12%; font-size: 200%; margin-top: 12%;"></i>
 						</div>
-						<div class="col-xl-10" style="margin-top: 2%">
+						<div class="col-xl-10 col-md-10 col-sm-10" style="margin-top: 2%">
 							<b>MAIL US</b><br>
 							support@yourmail.com
 						</div>
 					</div>
-					<div class="row col-xl-12" style="padding-top: 8%;">
-						<div class="col-xl-2">
+					<div class="row col-xl-12 col-md-12 col-sm-12" style="padding-top: 8%;">
+						<div class="col-xl-2 col-md-2 col-sm-2">
 							<img class="tuan2" src="images/iconbg2.png" alt="" style="position: relative;">
 							<i class="fa fa-mobile tuan2" aria-hidden="true" style="position: absolute; left: 12%; font-size: 200%; margin-top: 12%;"></i>
 						</div>
-						<div class="col-xl-10" style="margin-top: 2%">
+						<div class="col-xl-10 col-md-10 col-sm-10" style="margin-top: 2%">
 							<b>CALL US</b><br>
 							0345439021
 						</div>
 					</div>
-					<div class="row col-xl-12" style="padding-top: 8%;">
-						<div class="col-xl-2">
+					<div class="row col-xl-12 col-md-12 col-sm-12" style="padding-top: 8%;">
+						<div class="col-xl-2 col-md-2 col-sm-2">
 							<img class="tuan3" src="images/iconbg2.png" alt="" style="position: relative;">
 							<i class="fa fa-home tuan3" aria-hidden="true" style="position: absolute; left: 12%; font-size: 200%; margin-top: 12%;"></i>
 						</div>
-						<div class="col-xl-10" style="margin-top: 2%">
+						<div class="col-xl-10 col-md-10 col-sm-10" style="margin-top: 2%">
 							<b>VISIT US</b><br>
 							20.2 Eilzaben ST, Metbourne. Victoria 3000
 						</div>
 					</div>
-					<div class="row col-xl-12" style="padding-top: 8%;">
-						<div class="col-xl-2">
+					<div class="row col-xl-12 col-md-12 col-sm-12" style="padding-top: 8%;">
+						<div class="col-xl-2 col-md-2 col-sm-2">
 							<img class="tuan4" src="images/iconbg2.png" alt="" style="position: relative;">
 							<i class="fa fa-clock-o tuan4" aria-hidden="true" style="position: absolute; left: 12%; font-size: 200%; margin-top: 12%;"></i>
 						</div>
-						<div class="col-xl-10" style="margin-top: 2%">
+						<div class="col-xl-10 col-md-10 col-sm-10" style="margin-top: 2%">
 							<b>WORK HOUR</b><br>
 							Mon - Sat. 08 Am - 17 Pm
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-6">
+				<div class="col-xl-6 col-md-12 col-sm-12">
 					<h5 class="tieudecon">LEAVE MESSAGE</h5>
 		  			<div class="progress" id="thanhtieude">
 		  				<div class="progress-bar" role="progressbar" style="width: 30%"></div>
 					</div>
 					<div class="row container-fluid" style="padding-top: 20%;">
-						<div class="col-xl-6">
+						<div class="col-xl-6 col-md-12 col-sm-12">
 							<form action="">
 								<input type="text" placeholder="First Name">
 							</form>
 						</div>
-						<div class="col-xl-6">
+						<div class="col-xl-6 col-md-12 col-sm-12">
 							<form action="">
 								<input type="text" placeholder="Last Name">
 							</form>
 						</div>
 					</div>
 					<div class="row container-fluid" style="padding-top: 2%;">
-						<div class="col-xl-6">
+						<div class="col-xl-6 col-md-12 col-sm-12">
 							<form action="">
 								<input type="text" placeholder="Emaiil">
 							</form>
 						</div>
-						<div class="col-xl-6">
+						<div class="col-xl-6 col-md-12 col-sm-12">
 							<form action="">
 								<input type="text" placeholder="Subject">
 							</form>
@@ -1289,7 +1407,7 @@
 						</div>
 					</div>
 					<div class="row container-fluid">
-						<div class="col-xl-12">
+						<div class="col-xl-12 col-md-12 col-sm-12">
 							<button  style="background: orange; width: 100px; height: 40px; color: white">submit</button>
 						</div>
 					</div>
@@ -1298,7 +1416,7 @@
 		</div>
 		<div class="bg4">
 			<div id="mo4" class="row container-fluid text-center mar">
-				<div class="col-xl-12" style="padding-top: 3%; color: white">
+				<div class="col-xl-12 col-md-12 col-sm-12" style="padding-top: 3%; color: white">
 					<p style="font-size: 200%;"><i class="fa fa-map-marker" aria-hidden="true"></i></p>
 					<h4><b>FIND US ON GOOGLE MAP</b></h4>
 				</div>
@@ -1306,11 +1424,11 @@
 		</div>
 		<div class="bg5">
 			<div class="row mar container-fluid" style="padding-top: 5%">
-				<div class="col-xl-3">
+				<div class="col-xl-3 col-md-3 col-sm-3">
 					<p><img src="images/logo.png" alt=""></p>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, doloribus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim odio dignissimos maiores excepturi aspernatur incidunt ratione quis accusamus tenetur perspiciatis!</p>
 				</div>
-				<div class="col-xl-3">
+				<div class="col-xl-3 col-md-3 col-sm-3">
 					<h6 class="tieudecon">SITEMAP</h6>
 		  			<div class="progress" id="thanhtieude">
 		  				<div class="progress-bar" role="progressbar" style="width: 20%"></div>
@@ -1321,7 +1439,7 @@
 					<p class="hover3">Our team</p>
 					<p class="hover4">Portfollo</p>
 				</div>
-				<div class="col-xl-3">
+				<div class="col-xl-3 col-md-3 col-sm-3">
 					<h6 class="tieudecon">ACHIVES</h6>
 		  			<div class="progress" id="thanhtieude">
 		  				<div class="progress-bar" role="progressbar" style="width: 20%"></div>
@@ -1332,7 +1450,7 @@
 					<p class="hover7">March 2015</p>
 					<p class="hover8">April 2015</p>
 				</div>
-				<div class="col-xl-3">
+				<div class="col-xl-3 col-md-3 col-sm-3">
 					<h6 class="tieudecon">NEWSLETTER</h6>
 		  			<div class="progress" id="thanhtieude">
 		  				<div class="progress-bar" role="progressbar" style="width: 20%"></div>
@@ -1347,10 +1465,28 @@
 				</div>
 			</div>
 		</div>
+		<div class="bg6">
+			<div class="row mar container-fluid" style="padding-top: 5%;">
+				<div class="col-xl-6 col-md-12 col-sm-12">
+					Made with <i style="color: red !important;" class="fa fa-heart" aria-hidden="true"></i> <font color="orange"> Bootstrap themes</font> 2016. All Rights Reserved
+				</div>
+				<div class="col-xl-6 col-md-12 col-sm-12 text-right">
+					<i class="fa fa-facebook-official" aria-hidden="true"></i> <i class="fa fa-facebook-official" aria-hidden="true"></i> <i class="fa fa-facebook-official" aria-hidden="true"></i> 
+				</div>
+			</div>
+		</div>
 	</div>
 	<script>
+		$(document).ready(function(){
+	    $('.hoveranh').on('mouseenter',function(){
+	      $(this).children('div').fadeIn("slow");
+	    })
+	    $('.hoveranh').on('mouseleave',function(){
+	      $(this).children('div').fadeOut("slow");
+	    })
+	  })  
 		$('.counter').counterUp({
-		  'time': 1000,
+		  'time': 2000,
 		  'delay': 10
 		});
 		$('.hai').mouseover(function() {
@@ -1505,7 +1641,7 @@
 			$('.tuan4').next().css("color","black")
 		})
 		$(document).ready(function() {
-		  var projects = $('.card');
+		  var projects = $('.card1');
 		  var filteredProjects = [];
 		  var selection = "all";
 		  var running = false;
